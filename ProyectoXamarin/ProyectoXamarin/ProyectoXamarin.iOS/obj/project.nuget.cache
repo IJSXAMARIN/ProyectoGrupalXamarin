@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OtYAfD1zwmRXNrEGQQwf3BfLIwclECxQtUq39DaJZCaqKgEtD5acFa/b5fvVOB2qUTjkb1gVc8SgTdV0GU9T9Q==",
+  "dgSpecHash": "E2mUqDZoTPGY1fGB4q5GcvIFbhBP8nWUrtmyouIT4cVaBk3WpxyDeJoQwgkqCM0wWCbH/v9AIzbwzi3W9ltb4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
+  "projectFilePath": "C:\\XAMARIN\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\xusin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\xusin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\sarab\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\sarab\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
   ],
