@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+s3iauYpZx5b/BAjN/Q84814jV1sDiX7cBsC57viuUiqu9kJCpXPWWDbG3FMKi15xPLyqkl+/YE1HqkD4CTYzw==",
+  "dgSpecHash": "ZW2eaHqd+KLVhH0OFTG5GmA1PsqsDsC62ApMT47WALx5YfQj7zxNqNb6oggJpLRtRzoMA41f3mE/ei+SUOIeSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
+  "projectFilePath": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sarab\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",

@@ -1024,11 +1024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
       "projectName": "ProyectoXamarin.iOS",
-      "projectPath": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
+      "projectPath": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
       "packagesPath": "C:\\Users\\sarab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\obj\\",
+      "outputPath": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1049,8 +1049,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
-              "projectPath": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
+            "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
+              "projectPath": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
             }
           }
         }

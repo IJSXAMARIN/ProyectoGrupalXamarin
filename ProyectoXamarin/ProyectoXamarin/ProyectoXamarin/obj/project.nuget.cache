@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GrE5FQ0UBDkp7c6+D3FsDiS1eqV6MD6N9+n//r+EqPspvhvl/sX4UEgRHwk8Ik6t8KkTkGQNEphetaiR+1m6wQ==",
+  "dgSpecHash": "cAXruEDy65xkiP818Sun7g+iDTJ6qJwaabift+v62CVgiIjLEltm6S5USGNz5BbrYu/BUWeblyJyWCGfu1F5Fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sarab\\source\\repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
+  "projectFilePath": "C:\\Users\\sarab\\Source\\Repos\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sarab\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\sarab\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
