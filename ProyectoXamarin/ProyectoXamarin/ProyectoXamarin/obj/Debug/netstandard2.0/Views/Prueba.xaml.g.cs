@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ProyectoXamarin.Views.Geolocalizacion.xaml", "Views/Geolocalizacion.xaml", typeof(global::ProyectoXamarin.Views.Geolocalizacion))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ProyectoXamarin.Views.Prueba.xaml", "Views/Prueba.xaml", typeof(global::ProyectoXamarin.Views.Prueba))]
 
 namespace ProyectoXamarin.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Geolocalizacion.xaml")]
-    public partial class Geolocalizacion : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Prueba.xaml")]
+    public partial class Prueba : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Geolocalizacion));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Prueba));
         }
     }
 }
