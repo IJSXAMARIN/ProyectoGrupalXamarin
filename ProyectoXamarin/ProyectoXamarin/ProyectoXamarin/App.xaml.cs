@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using ProyectoXamarin.Services;
 using ProyectoXamarin.Views;
 
 namespace ProyectoXamarin
@@ -9,11 +8,12 @@ namespace ProyectoXamarin
     public partial class App : Application
     {
 
+        public static MasterDetailPage MasterD { get; set; }
+
         public App()
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
 
