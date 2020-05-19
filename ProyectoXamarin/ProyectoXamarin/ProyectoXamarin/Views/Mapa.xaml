@@ -6,18 +6,13 @@
               xmlns:map ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="ProyectoXamarin.Views.Mapa">
-
-        <Grid>
-            <map:Map MapType="Street" HasZoomEnabled="True" x:Name="MyMap">
-                <map:Map.ItemTemplate>
-
-                    <DataTemplate>
-                        <map:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding PlaceName}" />
-                    </DataTemplate>
-                </map:Map.ItemTemplate>
-
-            </map:Map>
-
-        </Grid>
-
+    <Grid>
+        <map:Map MapType="Street" HasZoomEnabled="True" x:Name="MyMap">
+            <map:Map.ItemTemplate>
+                <DataTemplate>
+                    <map:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding PlaceName}" />
+                </DataTemplate>
+            </map:Map.ItemTemplate>
+        </map:Map>
+    </Grid>
 </ContentPage>
