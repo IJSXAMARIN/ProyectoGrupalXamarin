@@ -58,3 +58,7 @@ C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\Proyect
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\obj\iPhone\Debug\ProyectoXamarin.iOS.csproj.CopyComplete
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\obj\iPhone\Debug\ProyectoXamarin.iOS.exe
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\obj\iPhone\Debug\ProyectoXamarin.iOS.pdb
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\bin\iPhone\Debug\System.Net.Http.Formatting.dll
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\bin\iPhone\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\bin\iPhone\Debug\Xamarin.Forms.Maps.dll
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.iOS\bin\iPhone\Debug\Xamarin.Forms.Maps.iOS.dll

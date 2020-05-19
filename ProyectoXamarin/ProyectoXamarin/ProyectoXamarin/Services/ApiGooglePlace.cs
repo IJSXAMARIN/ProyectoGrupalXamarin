@@ -96,10 +96,10 @@ namespace ProyectoXamarin.Services
         }
 
 
-        public async Task PlaceDetail(String placeId)
-        {
+        //public async Task PlaceDetail(String placeId)
+        //{
 
-        }
+        //}
 
 
         public async Task<Stream> LoadImagesPlace(String photoReference)
