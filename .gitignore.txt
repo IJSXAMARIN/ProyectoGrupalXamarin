@@ -71,6 +71,7 @@ dlldata.c
 *.cache
 *.ddl
 .suo
+*.csp
 
 # Chutzpah Test files
 _Chutzpah*
