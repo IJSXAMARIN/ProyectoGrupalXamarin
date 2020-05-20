@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoXamarin.MainMasterPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu Principal">
+            <StackLayout Orientation="Vertical">
+                <StackLayout BackgroundColor="LightCoral" HeightRequest="50">
+                    <Label FontSize="20" TextColor="White" 
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand" Text="Master Details"/>
+                </StackLayout>
+                <StackLayout>
+                    <ListView RowHeight="60" x:Name="lsvmenupaginas">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout VerticalOptions="FillAndExpand">
+                                        <Label Text="{Binding Titulo}" FontSize="Medium" 
+                                               VerticalOptions="CenterAndExpand" HorizontalOptions="Start" 
+                                               Padding="20" TextColor="Black"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

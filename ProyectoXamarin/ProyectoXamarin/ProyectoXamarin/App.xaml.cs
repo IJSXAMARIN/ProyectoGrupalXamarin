@@ -8,13 +8,13 @@ namespace ProyectoXamarin
     public partial class App : Application
     {
 
-        public static MasterDetailPage MasterD { get; set; }
+   
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainMasterPage();
         }
 
         protected override void OnStart()
