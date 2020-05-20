@@ -10,9 +10,6 @@
             <Label Text="Pagina Principal"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Gray" Padding="20"/>
-            <Image Source="https://www.expreso.info/files/2020-04/Viaje_Combinado.jpg"
-                   
-                   HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

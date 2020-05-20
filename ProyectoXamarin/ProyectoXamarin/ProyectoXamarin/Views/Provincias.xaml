@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoXamarin.Views.Provincias">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Selecciona una provincia"
+                   FontSize="20"
+                   Padding="10"
+                   TextColor="MediumPurple"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+            <ListView x:Name="lsvprovincias">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Imagen}" WidthRequest="60" HeightRequest="60"/>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Nombre}" FontSize="15" TextColor="Black"/>
+                                        <Label Text="{Binding Descripcion}" FontSize="15" TextColor="Fuchsia"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+           </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
