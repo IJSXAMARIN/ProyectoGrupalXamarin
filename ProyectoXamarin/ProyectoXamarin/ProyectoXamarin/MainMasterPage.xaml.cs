@@ -24,6 +24,10 @@ namespace ProyectoXamarin
             item.PaginaHija = typeof(Inicio);
             this.MenuPaginas.Add(item);
             item = new MasterPageItem();
+            item.Titulo = "Provincias";
+            item.PaginaHija = typeof(Provincias);
+            this.MenuPaginas.Add(item);
+            item = new MasterPageItem();
             item.Titulo = "Mapa";
             item.PaginaHija = typeof(PruebasMapa);
             this.MenuPaginas.Add(item);
@@ -42,10 +46,10 @@ namespace ProyectoXamarin
 
         private void Lsvmenupaginas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            IsPresented = false;
             MasterPageItem item = (MasterPageItem)e.SelectedItem;
             Type pagina = item.PaginaHija;
-            Detail = new NavigationPage((Page)Activator.CreateInstance(pagina));
-            IsPresented = false;
+            Detail = new NavigationPage((Page)Activator.CreateInstance(pagina));           
         }
     }
 }
