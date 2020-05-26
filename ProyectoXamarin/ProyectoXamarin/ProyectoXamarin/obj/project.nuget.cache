@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3Ll7+GQMMDU0ey+fbaKzF0HRKzFaseCvJaBZP8FV5zTClZKiCYkeqxN3iNMwTj08mF+yiI/OPNsFkuEHoLt0sA==",
+  "dgSpecHash": "t/TB+27HjDxkIYhWvBmqmc2eQ7TAckL37gYSIfLUmqgLWAA2HOPxbWnClL4Ny5dLiwrnqjIt3RZRKAl4DlVmdQ==",
   "success": true,
   "projectFilePath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
   "expectedPackageFiles": [
@@ -11,8 +11,8 @@
     "C:\\Users\\isanc\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512",
-    "C:\\Users\\isanc\\.nuget\\packages\\xamarin.forms.maps\\4.4.0.991265\\xamarin.forms.maps.4.4.0.991265.nupkg.sha512"
+    "C:\\Users\\isanc\\.nuget\\packages\\xamarin.forms\\4.6.0.800\\xamarin.forms.4.6.0.800.nupkg.sha512",
+    "C:\\Users\\isanc\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.800\\xamarin.forms.maps.4.6.0.800.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,9 @@ namespace ProyectoXamarin.Models
         [JsonProperty("results")]
         public List<Place> Places { get; set; }
 
+
+        [JsonProperty("rows")]
+        public List<DistanceElements> DistanceRows { get; set; }
 
         public JsonResultGoogleApi()
         {

@@ -14,7 +14,7 @@ namespace ProyectoXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainMasterPage();
+            MainPage = new PruebasMapa();
         }
 
         protected override void OnStart()

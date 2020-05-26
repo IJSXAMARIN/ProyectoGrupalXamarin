@@ -5,6 +5,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms.Maps;
 
 namespace ProyectoXamarin.Services
 {
@@ -33,7 +34,7 @@ namespace ProyectoXamarin.Services
 
         }
 
-        public async Task<List<Place>> GetPlaces()
+        public async Task<List<Place>> GetPlaces() // TODO: El método tiene que recibir -> Position position
         {
 
             JsonResultGoogleApi jsonResultGoogle = new JsonResultGoogleApi();
@@ -106,16 +107,13 @@ namespace ProyectoXamarin.Services
         {
             using (HttpClient client = new HttpClient())
             {
-                // client.BaseAddress = new Uri(this.globalUrl);
+        
 
                 client.DefaultRequestHeaders.Accept.Clear();
-                //  client.DefaultRequestHeaders.Accept.Add(header);
+            
+                String url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoReference + "&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
 
-
-                // photoReference = "CmRaAAAAzlJhPzrElPgqR9i_kjgvUxCr8pQlUQw4OHtUGFXLggySP0u7tmgEZdghDl6ayAAhV_w3bBal_7ibJr1424ZiOOkz8smWTJPPxU01PIh0jpf7W9mQA9wXxov6PPD1kkppEhDCfC0Zzffu2aq5xYsIz0wuGhT-peQkb8YQjNWnCfPtvk0Vu6IWuA&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
-
-
-                HttpResponseMessage response = await client.GetAsync("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoReference);
+                HttpResponseMessage response = await client.GetAsync(url);
 
                 if (response.IsSuccessStatusCode || response.StatusCode == System.Net.HttpStatusCode.Forbidden)
                 {
@@ -131,5 +129,44 @@ namespace ProyectoXamarin.Services
 
             }
         }
+
+        public async Task<JsonResultGoogleApi> GetDistanceAsync(Position userPosition, Position placePosition) 
+        {
+           
+
+                // units=metric => Para que devuelva en Km y metros
+                // language=es 
+                // key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM"
+                // travel_mode=walking 
+
+                String userLatitude = userPosition.Latitude.ToString().Replace(',','.');
+                String userLongitude = userPosition.Longitude.ToString().Replace(',', '.');
+
+                String placeLatitude = placePosition.Latitude.ToString().Replace(',', '.');
+                String placeLongitude = placePosition.Longitude.ToString().Replace(',', '.');
+
+                String url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=" + userLatitude + "," + userLongitude + "&destinations=" + placeLatitude + "," + placeLongitude + "&travel_mode=walking&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+
+               
+
+            using (HttpClient client = new HttpClient())
+            {
+            
+                client.DefaultRequestHeaders.Accept.Clear();
+             
+                HttpResponseMessage response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadAsAsync<JsonResultGoogleApi>();
+                }
+                else
+                {
+                    return new JsonResultGoogleApi();
+                }
+            }
+        }
+
+
     }
 }
+

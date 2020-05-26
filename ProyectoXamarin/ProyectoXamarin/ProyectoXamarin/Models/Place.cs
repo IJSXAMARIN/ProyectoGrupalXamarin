@@ -24,5 +24,8 @@ namespace ProyectoXamarin.Models
 
         [JsonProperty("geometry")]
         public Geometry Geolocation { get; set; }
+
+        [JsonIgnore]
+        public bool Visitado { get; set; }
     }
 }

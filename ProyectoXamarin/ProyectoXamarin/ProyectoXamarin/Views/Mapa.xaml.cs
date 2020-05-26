@@ -28,9 +28,33 @@ namespace ProyectoXamarin.Views
 
             // Mueve el mapa hasta las coordenadas (Position) y con un radio de 50Km (50000)
 
-            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567), Distance.FromMeters(50000)));
+
+            Circle circle = new Circle
+            {
+                Center = new Position(40.416883, -3.703567),
+                Radius = new Xamarin.Forms.Maps.Distance(50000),
+                StrokeColor = Color.FromHex("#88FF0000"),
+                StrokeWidth = 8,
+                FillColor = Color.FromHex("#88FFC0CB")
+            };
+
+            MyMap.MapElements.Add(circle);
+
+            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567), Xamarin.Forms.Maps.Distance.FromMeters(50000)));
             Task.Run(async () => await SetPlacesMap()).Wait();
 
+            swithMap.Toggled += (sender, e) =>
+            {
+                if (e.Value)
+                {
+                    MyMap.MapType = MapType.Satellite;
+                }
+                else
+                {
+                    MyMap.MapType = MapType.Street;
+                }
+                // Perform an action after examining e.Value
+            };
         }
 
         public async Task SetPlacesMap()
@@ -70,12 +94,23 @@ namespace ProyectoXamarin.Views
 
                     await Navigation.PushModalAsync(details, true);
 
-
+                   
                     // this.myImage.Source = ImageSource.FromStream(() => stream);
                     // await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
 
                 };
-
+                swithMap.Toggled += (sender, e) =>
+                {
+                    if (e.Value)
+                    {
+                        MyMap.MapType = MapType.Satellite;
+                    }
+                    else
+                    {
+                        MyMap.MapType = MapType.Street;
+                    }
+                    // Perform an action after examining e.Value
+                };
                 MyMap.Pins.Add(pin);
             }
 

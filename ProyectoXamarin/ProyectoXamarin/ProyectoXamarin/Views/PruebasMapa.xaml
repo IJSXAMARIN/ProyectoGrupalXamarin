@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:renderers="clr-namespace:ProyectoXamarin.Maps"
+             xmlns:map ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="ProyectoXamarin.Views.PruebasMapa">
+    <StackLayout>
+        <renderers:CustomMap x:Name="MyMap">
+            <map:Map.ItemTemplate>
+                <DataTemplate>
+                    <map:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding PlaceName}" />
+                </DataTemplate>
+            </map:Map.ItemTemplate>
+        </renderers:CustomMap>
+        <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked" />
+        <Switch x:Name="swithMap" IsToggled="False"/>
+    </StackLayout>
+</ContentPage>
+<!--
+        <renderers:CustomMap x:Name="MyMap">
+            <map:Map.Behaviors>
+            </map:Map.Behaviors>
+            <map:Map.ItemTemplate>
+                <DataTemplate>
+                    <map:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding PlaceName}" />
+                </DataTemplate>
+            </map:Map.ItemTemplate>
+        </renderers:CustomMap
+        <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked" />
+        <Switch x:Name="swithMap" IsToggled="False"/>
+    </StackLayout>
+</ContentPage>
+
+-->
