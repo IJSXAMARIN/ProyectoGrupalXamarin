@@ -26,7 +26,6 @@ namespace ProyectoXamarin.Views
         {
             InitializeComponent();
 
-            ApiCities.Prueba();
             this.viewModel = new PlacesViewModel();
 
 

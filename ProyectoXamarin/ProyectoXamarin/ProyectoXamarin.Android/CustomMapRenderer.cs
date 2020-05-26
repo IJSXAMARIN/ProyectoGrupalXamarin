@@ -61,7 +61,7 @@ namespace ProyectoXamarin.Droid.Renderers
                 marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
             }
 
-            marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
+          //  marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
             return marker;
         }
 
