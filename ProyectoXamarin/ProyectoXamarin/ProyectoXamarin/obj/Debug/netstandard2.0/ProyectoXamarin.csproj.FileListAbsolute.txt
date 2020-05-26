@@ -14,7 +14,6 @@ C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\Proyect
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Inicio.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Mapa.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\PlaceDetailsModal.xaml.g.cs
-C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csprojAssemblyReference.cache
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\MainMasterPage.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Info.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Perfil.xaml.g.cs
@@ -40,3 +39,6 @@ C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.pdb
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csprojAssemblyReference.cache
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\PruebasMapa.xaml.g.cs
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csprojAssemblyReference.cache

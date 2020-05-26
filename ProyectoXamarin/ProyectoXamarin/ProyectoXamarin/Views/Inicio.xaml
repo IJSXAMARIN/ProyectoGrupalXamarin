@@ -6,10 +6,51 @@
              mc:Ignorable="d"
              x:Class="ProyectoXamarin.Views.Inicio">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Pagina Principal"
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Monument Play"
+                                  FontFamily="Arial"
                 VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Gray" Padding="20"/>
-        </StackLayout>
+                HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Gray" Padding="10"/>
+            <Frame CornerRadius="30">
+                <Image Source="Portada.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+            </Frame>
+
+
+            <Frame BorderColor="Gray"
+       CornerRadius="5"
+       Padding="10" Margin="10">
+                <StackLayout>
+                    <Label Text="Mejora tus viajes"
+                           FontFamily="Arial"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"/>
+                    <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Label Text="Gracias a nuestra aplicacion haz que tus viajes sean mas emocionantes encontrando los monumentos y puntos de interes mas importante de la zona!" FontSize="17"
+                                          FontFamily="Arial"/>
+                    <Image Source="tajeta.png" HeightRequest="250" 
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
+                </StackLayout>
+            </Frame>
+                <Frame BorderColor="Gray"
+       CornerRadius="5"
+       Padding="10" Margin="10">
+                    <StackLayout>
+                        <Label Text="Perfil unico"
+           FontSize="Medium"
+           FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+                        <Label Text="Inicia sesion en tu  perfil y visualiza los datos de tus viajes y monumentos visitados!" FontSize="17"  FontFamily="Arial"/>
+                        <Image Source="Perfil.jpg" HeightRequest="250" 
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

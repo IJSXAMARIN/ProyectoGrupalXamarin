@@ -4,9 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:viewmodel="clr-namespace:ProyectoXamarin.ViewModels"
              x:Class="ProyectoXamarin.Views.Provincias">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout.BindingContext>
+                <viewmodel:ProvinciasViewModel/>
+            </StackLayout.BindingContext>
             <Label Text="Selecciona una provincia"
                    FontSize="20"
                    Padding="10"
@@ -14,22 +18,22 @@
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout>
-            <ListView x:Name="lsvprovincias">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
+                <ListView ItemsSource="{Binding Provincias}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding Imagen}" WidthRequest="60" HeightRequest="60"/>
+                                    <Image Source="{Binding Imagen}" WidthRequest="70" HeightRequest="70"/>
                                     <StackLayout Orientation="Vertical">
-                                        <Label Text="{Binding Nombre}" FontSize="15" TextColor="Black"/>
+                                        <Label Text="{Binding Nombre}" FontSize="15" TextColor="Red"/>
                                         <Label Text="{Binding Descripcion}" FontSize="15" TextColor="Fuchsia"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-           </StackLayout>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

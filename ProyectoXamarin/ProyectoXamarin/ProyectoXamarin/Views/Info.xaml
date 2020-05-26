@@ -6,10 +6,15 @@
              mc:Ignorable="d"
              x:Class="ProyectoXamarin.Views.Info">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="15">
             <Label Text="Sobre nosotros"
                 VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" Padding="20" TextColor="Gray" FontSize="25"/>
+                HorizontalOptions="CenterAndExpand" Padding="5" TextColor="Gray" FontSize="25"/>
+            <Label Text="Programadores:" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="Medium"/>
+            <Label Text="Jesus Saenz Jimenez -> Diseño de la applicacion y estilos"/>
+            <Image Source=""/>
+            <Label Text="Ivan, poned los apellidos vosotros jaja"/>
+            <Label Text="Ivan, poned los apellidos vosotros jaja"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
