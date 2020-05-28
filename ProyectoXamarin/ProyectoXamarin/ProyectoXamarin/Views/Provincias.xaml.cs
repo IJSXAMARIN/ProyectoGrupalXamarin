@@ -1,4 +1,5 @@
 ﻿using ProyectoXamarin.Models;
+using ProyectoXamarin.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,20 @@ namespace ProyectoXamarin.Views
         public Provincias()
         {
             InitializeComponent();
+        }
+
+        private async void Picker_BindingContextChanged(object sender, EventArgs e)
+        {
+            //Country country = (Country)this.piki.SelectedItem;
+            //String count = country.CountryName;
+            //ProvinciasViewModel viewmodel = new ProvinciasViewModel();        
+            //await viewmodel.ObtenerState(count);
+        }
+        private void pikerciudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            City ciudad = (City)this.pikerciudad.SelectedItem;
+            String ciu = ciudad.CityName;
+            ciu = ciu.Replace(' ', '+');
         }
     }
 }
