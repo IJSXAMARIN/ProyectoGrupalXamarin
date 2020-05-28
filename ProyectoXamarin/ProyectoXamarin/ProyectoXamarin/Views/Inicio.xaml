@@ -50,6 +50,21 @@
                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
                     </StackLayout>
                 </Frame>
+                <Frame BorderColor="Gray"
+       CornerRadius="5"
+       Padding="10" Margin="10">
+                    <StackLayout>
+                        <Label Text="Elige!"
+           FontSize="Medium"
+           FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+                        <Label Text="Elige el lugar que vas a visitar para ver todo lo que necesites de manera personalizada" FontSize="17"  FontFamily="Arial"/>
+                        <Image Source="pais.jpg" HeightRequest="200" 
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
