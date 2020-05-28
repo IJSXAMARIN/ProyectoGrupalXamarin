@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kAyjX8QOH+iJFxn884xEOQm94ovbrdfJP5kiF5s8t2AeOJFkJmW52Lh20nwH24kuhUx6810d7Iy8AP+Th/Xr2g==",
+  "dgSpecHash": "vHjxadlwm3zLdEIVJSq91YHv9uSQkQj0qcyZZdUD2pVK7Q/4j+UQ0VKD4Xpn/DFbRGl9g7SJpXRv1qhJs+0ipA==",
   "success": true,
   "projectFilePath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\isanc\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
