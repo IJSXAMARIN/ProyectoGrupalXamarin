@@ -1124,3 +1124,9 @@ C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\Proyect
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\tajeta.png
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\perfil.jpg
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\persona.jpg
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\portada.jpg
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\tajeta.png
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\perfil.jpg
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\persona.jpg
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\android\assets\Autofac.dll
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\android\assets\Autofac.pdb

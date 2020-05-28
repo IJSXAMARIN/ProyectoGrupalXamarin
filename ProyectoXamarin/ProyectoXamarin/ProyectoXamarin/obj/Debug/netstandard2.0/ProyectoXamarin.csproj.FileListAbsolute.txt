@@ -40,3 +40,5 @@ C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\PruebasMapa.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csprojAssemblyReference.cache
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csproj.CoreCompileInputs.cache
+C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\XamlC.stamp

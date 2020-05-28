@@ -12,6 +12,8 @@ namespace ProyectoXamarin.Services
     public class ApiGooglePlaces
     {
 
+        public Geolocalizacion geo;
+
         private readonly string globalUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch";
 
         private readonly string ApiKey = "AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
@@ -29,6 +31,7 @@ namespace ProyectoXamarin.Services
         string request = "";
         public ApiGooglePlaces()
         {
+            this.geo = new Geolocalizacion();
 
             this.request = pruebaLocation + "&" + fields + "&key=" + ApiKey;
 
@@ -36,10 +39,12 @@ namespace ProyectoXamarin.Services
 
         public async Task<List<Place>> GetPlaces() // TODO: El método tiene que recibir -> Position position
         {
+            Geoloc geo = await this.geo.GetLoc<Geoloc>();
 
             JsonResultGoogleApi jsonResultGoogle = new JsonResultGoogleApi();
 
-            String request = "/json?location=40.416883, -3.703567&radius=50000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+            String request = "/json?location=" + geo.Latitud + "," + geo.Longitud + "&radius=50000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+
             do
             {
                 JsonResultGoogleApi _json = new JsonResultGoogleApi();
@@ -49,14 +54,14 @@ namespace ProyectoXamarin.Services
                 {
                     request += "&pagetoken=" + jsonResultGoogle.NextPageToken;
                 }
-                _json = await this.CallApi<JsonResultGoogleApi>(this.globalUrl + request);
+                _json = await this.GetPlaces<JsonResultGoogleApi>(this.globalUrl + request);
 
                 if (_json != null)
                 {
                     jsonResultGoogle.Places.AddRange(_json.Places);
 
                     // Descomentar siguiente linea para que llame a todos
-                    //  json.NextPageToken = _json.NextPageToken;
+                    jsonResultGoogle.NextPageToken = _json.NextPageToken;
 
                 }
                 else
@@ -72,7 +77,7 @@ namespace ProyectoXamarin.Services
 
         }
 
-        public async Task<T> CallApi<T>(String request)
+        public async Task<T> GetPlaces<T>(String request)
         {
 
             using (HttpClient client = new HttpClient())
@@ -166,6 +171,44 @@ namespace ProyectoXamarin.Services
             }
         }
 
+        public async Task<List<Place>> GetPlacesByCity(String city)
+        {
+            String url = "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=" + city + "&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+
+
+            JsonResultGoogleApi jsonResultGoogle = new JsonResultGoogleApi();
+
+          
+            do
+            {
+                JsonResultGoogleApi _json = new JsonResultGoogleApi();
+
+                // PageToken sirve para cargar los siguientes 20
+                if (jsonResultGoogle.NextPageToken != null)
+                {
+                    request += "&pagetoken=" + jsonResultGoogle.NextPageToken;
+                }
+                _json = await this.GetPlaces<JsonResultGoogleApi>(url);
+
+                if (_json != null)
+                {
+                    jsonResultGoogle.Places.AddRange(_json.Places);
+
+                    // Descomentar siguiente linea para que llame a todos
+                    jsonResultGoogle.NextPageToken = _json.NextPageToken;
+
+                }
+                else
+                {
+                    jsonResultGoogle.NextPageToken = null;
+                }
+
+
+            } while (jsonResultGoogle.NextPageToken != null);
+
+            return jsonResultGoogle.Places;
+        }
+       
 
     }
 }
