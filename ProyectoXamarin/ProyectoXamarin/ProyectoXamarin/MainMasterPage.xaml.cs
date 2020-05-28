@@ -29,7 +29,7 @@ namespace ProyectoXamarin
             this.MenuPaginas.Add(item);
             item = new MasterPageItem();
             item.Titulo = "Mapa";
-            item.PaginaHija = typeof(PruebasMapa);
+            item.PaginaHija = typeof(Mapa);
             this.MenuPaginas.Add(item);
             item = new MasterPageItem();
             item.Titulo = "Perfil";

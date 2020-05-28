@@ -5,11 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ProyectoXamarin.Views.Perfil">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Perfil"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand"  FontSize="25" Padding="25" TextColor="Gray"/>
+        <StackLayout TranslationY="-20" >
+            <Image Aspect="AspectFill" Source="persona.jpg"/>
+            <StackLayout Padding="20">
+                <Label Text="Nombre" FontAttributes="Bold" FontSize="20" x:Name="lblnombre"/>
+                <Label Text="My comments were misinterpreted after the game. I wasn't saying that I'm better than everyone else. I was referring to injuries. The team have lost a lot of important players through injury like Pepe, Bale, Benzema, Marcelo… That has harmed us and prevented us from reaching our usual level."/>
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="20"/>
+                <Label Text="Monumentos visitados:" FontAttributes="Bold" FontSize="20" />
+                <Label  x:Name="lblvisitados" FontSize="Small"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
