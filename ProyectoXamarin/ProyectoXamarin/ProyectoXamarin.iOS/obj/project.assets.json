@@ -1443,24 +1443,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xusin\\.nuget\\packages\\": {},
+    "C:\\Users\\isanc\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
+      "projectUniqueName": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
       "projectName": "ProyectoXamarin.iOS",
-      "projectPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
-      "packagesPath": "C:\\Users\\xusin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\obj\\",
+      "projectPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\ProyectoXamarin.iOS.csproj",
+      "packagesPath": "C:\\Users\\isanc\\.nuget\\packages\\",
+      "outputPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\xusin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1474,8 +1474,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
-              "projectPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
+            "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
+              "projectPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
             }
           }
         }
