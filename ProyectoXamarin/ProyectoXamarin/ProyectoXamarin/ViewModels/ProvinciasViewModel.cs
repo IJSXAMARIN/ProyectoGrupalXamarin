@@ -4,8 +4,10 @@ using ProyectoXamarin.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace ProyectoXamarin.ViewModels
 {
@@ -18,9 +20,24 @@ namespace ProyectoXamarin.ViewModels
             //this.Provincias = this.GenerarProvincias();
             Task.Run(async () =>
             {
-                await ObtenerCiudad();
+                await ObtenerCountry();
             });
-       
+
+
+            MessagingCenter.Subscribe<ProvinciasViewModel>(this, "Country", async (sender) =>
+            {
+                await ObtenerState(OptionSelected);
+               // OptionSelected = String.Empty;
+
+            });
+
+            MessagingCenter.Subscribe<ProvinciasViewModel>(this, "State", async (sender) =>
+            {
+                await ObtenerCiudad(OptionSelected);
+                // OptionSelected = String.Empty;
+
+            });
+
         }
 
         //private ObservableCollection<Provincia> _Provincias;
@@ -56,24 +73,33 @@ namespace ProyectoXamarin.ViewModels
             this.Countrys = new ObservableCollection<Country>(count);
         }
 
-        private ObservableCollection<State> _State;
+        private ObservableCollection<State> _States;
 
-        public ObservableCollection<State> State
+        public ObservableCollection<State> States
         {
-            get => this._State;
+            get => this._States;
 
             set
             {
-                this._State = value;
-                OnPropertyChanged("State");
+                this._States = value;
+                OnPropertyChanged("States");
             }
         }
+
         public async Task ObtenerState(String Country)
         {
             List<State> count = await ApiCities.GetStates(Country);
-            this.State = new ObservableCollection<State>(count);
+            this.States = new ObservableCollection<State>(count);
         }
 
+
+        public  void CargarPicker(String pickerName, String value)
+        {
+                OptionSelected = value;
+            MessagingCenter.Send(App.Locator.ProvinciasViewModel, pickerName);
+        }
+
+        private static String OptionSelected { get; set; }
 
         private ObservableCollection<City> _City;
 
@@ -88,10 +114,9 @@ namespace ProyectoXamarin.ViewModels
             }
         }
 
-        public async Task ObtenerCiudad()
+        public async Task ObtenerCiudad(String state)
         {
-            String ciudad = "Madrid";
-            List<City> count = await ApiCities.GetCities(ciudad);
+            List<City> count = await ApiCities.GetCities(state);
             this.City = new ObservableCollection<City>(count);
         }
 

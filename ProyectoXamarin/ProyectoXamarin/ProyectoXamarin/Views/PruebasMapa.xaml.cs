@@ -22,14 +22,14 @@ namespace ProyectoXamarin.Views
 
         private PlacesViewModel viewModel;
 
-        public PruebasMapa()
+        public PruebasMapa(String cityName)
         {
             InitializeComponent();
 
             this.viewModel = new PlacesViewModel();
 
 
-            Task.Run(async () => await SetPlacesMap()).Wait();
+            Task.Run(async () => await SetPlacesMap(cityName)).Wait();
 
             swithMap.Toggled += (sender, e) =>
             {
@@ -44,7 +44,7 @@ namespace ProyectoXamarin.Views
             };
         }
 
-        public async Task SetPlacesMap()
+        public async Task SetPlacesMap(String cityName)
         {
 
 
@@ -64,9 +64,24 @@ namespace ProyectoXamarin.Views
             MyMap.MapElements.Add(circle);
 
             // TODO: La posición es la geolocation del móvil
-            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567), Xamarin.Forms.Maps.Distance.FromMeters(2000)));
 
-            await this.viewModel.GetPlaces(new Position(1.0, 1.0));
+
+            Position position = new Position();
+
+            if(String.IsNullOrEmpty(cityName))
+            {
+                await this.viewModel.GetPlaces(new Position(1.0, 1.0)); await this.viewModel.GetPlaces(new Position(1.0, 1.0));
+
+                position = new Position(40.416883, -3.703567);
+
+            } else 
+            {
+                await this.viewModel.GetPlacesByCity(cityName);
+                position = await this.viewModel.GetPositionCity(cityName);
+
+            }
+
+            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Xamarin.Forms.Maps.Distance.FromMeters(2000)));
 
             foreach (Place place in this.viewModel.Places)
             {
@@ -101,8 +116,7 @@ namespace ProyectoXamarin.Views
             PlaceDetailsModal details = new PlaceDetailsModal();
 
             PlaceDetailViewModel _viewModel = new PlaceDetailViewModel();
-            //_viewModel.PlaceDetail = (PlaceDetails)_place;
-
+          
             _viewModel.PlaceDetail = new PlaceDetails()
             {
                 // TODO: LLamar bbdd y ver si ya está guardado
@@ -127,7 +141,7 @@ namespace ProyectoXamarin.Views
 
         private void btnActualizar_Clicked(object sender, EventArgs e)
         {
-            Task.Run(() => this.SetPlacesMap().Wait());
+            Task.Run(() => this.SetPlacesMap("").Wait());
         }
     }
 }
