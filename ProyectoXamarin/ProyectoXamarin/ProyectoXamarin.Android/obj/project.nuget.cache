@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vHjxadlwm3zLdEIVJSq91YHv9uSQkQj0qcyZZdUD2pVK7Q/4j+UQ0VKD4Xpn/DFbRGl9g7SJpXRv1qhJs+0ipA==",
+  "dgSpecHash": "iYYvFqFJHmnlpfmqJCfBvdtv2CIZyvux72YPftfuU1SUH8zmBceUqIKV/RPnE3l3In2XMZ7yhdToI7LgmSXBgw==",
   "success": true,
   "projectFilePath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\isanc\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\isanc\\.nuget\\packages\\plugin.currentactivity\\1.0.1\\plugin.currentactivity.1.0.1.nupkg.sha512",
+    "C:\\Users\\isanc\\.nuget\\packages\\plugin.permissions\\2.1.0\\plugin.permissions.2.1.0.nupkg.sha512",
     "C:\\Users\\isanc\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

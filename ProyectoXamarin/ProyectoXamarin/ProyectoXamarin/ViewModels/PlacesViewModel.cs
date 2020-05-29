@@ -43,12 +43,17 @@ namespace ProyectoXamarin.ViewModels
             this.Places = new ObservableCollection<Place>(places);
         }
 
-        public Place GetPlace(String placeId)
+        public async Task GetPlacesByCity(String city)
         {
-
-            return this._Places.FirstOrDefault(z => z.PlaceId == placeId);
+            // TODO: Pasarle la posición a la api
+            List<Place> places = await this.api.GetPlacesByCity(city);
+            this.Places = new ObservableCollection<Place>(places);
         }
 
+        public Place GetPlace(String placeId)
+        {
+            return this._Places.FirstOrDefault(z => z.PlaceId == placeId);
+        }
 
        public async Task<Place> LoadImagePlace(Place place)
        {

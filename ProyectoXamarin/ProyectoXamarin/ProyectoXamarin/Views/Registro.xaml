@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              xmlns:local="clr-namespace:ProyectoXamarin"
+             BindingContext="{Binding Source={x:Static local:App.Locator},
+                Path=UsuarioViewModel}"
+             x:Class="ProyectoXamarin.Views.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Nombre de usuario: "
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtUserName"
+                   Text="{Binding Usuario.NombreUs}"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Label Text="Email: "
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtEmail"
+                   Text="{Binding Usuario.Email}"                   
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Label Text="Nick Name: "
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtNickName"
+                   Text="{Binding Usuario.NickName}"                   
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Label Text="Contraseña: "
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txtPass"
+                   Text="{Binding Usuario.Password}"                   
+                   HorizontalOptions="FillAndExpand"/>
+
+            <Button BackgroundColor="LightGreen"
+                    TextColor="Green"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Registrarse"
+                    Command="{Binding RegistroUser}"
+                   />
+            <Button BackgroundColor="Orange"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Log in"
+                    x:Name="btnRedireccion"
+                    Clicked="btnRedireccion_Clicked_1"/>
+            <Label x:Name="lblMensaje"
+                   TextColor="Orange"
+                   FontSize="25"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

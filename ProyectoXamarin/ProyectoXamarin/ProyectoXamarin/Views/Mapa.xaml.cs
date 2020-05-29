@@ -1,4 +1,5 @@
-﻿using ProyectoXamarin.Models;
+﻿using Plugin.Permissions;
+using ProyectoXamarin.Models;
 using ProyectoXamarin.Services;
 using System;
 using System.Collections.Generic;
@@ -6,27 +7,38 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
+using Plugin.Permissions.Abstractions;
 
 namespace ProyectoXamarin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Mapa : ContentPage
     {
+        public Geolocalizacion geo;
         public ApiGooglePlaces api;
         List<Models.Place> places;
         public Mapa()
         {
 
             InitializeComponent();
+            this.geo = new Geolocalizacion();
 
             this.api = new ApiGooglePlaces();
             this.places = new List<Place>();
 
             // Mueve el mapa hasta las coordenadas (Position) y con un radio de 50Km (50000)
+            Task.Run(async () =>
+            {
+                AskForPermission();
+
+                Geoloc loc =   await this.geo.GetLoc<Geoloc>();
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position
+                (loc.Latitud, loc.Longitud), Xamarin.Forms.Maps.Distance.FromMeters(50000)));
+            }).Wait();
 
 
             Circle circle = new Circle
@@ -55,6 +67,36 @@ namespace ProyectoXamarin.Views
                 }
                 // Perform an action after examining e.Value
             };
+        }
+
+        private void AskForPermission()
+        {
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                try
+                {
+                    var status = await CrossPermissions.Current.
+                    CheckPermissionStatusAsync(Permission.Location);
+                    if (status != PermissionStatus.Granted)
+                    {
+                        var results = await CrossPermissions.Current.
+                            RequestPermissionsAsync(Permission.Location);
+                        if (results.ContainsKey(Permission.Location))
+                        {
+                            status = results[Permission.Location];
+                        }
+                    }
+                    if (status == PermissionStatus.Granted)
+                    {
+                        await Navigation.PushModalAsync(new Mapa());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.Write("ERROR!!!!!!!!!!!");
+                    Console.Write(ex);
+                }
+            });
         }
 
         public async Task SetPlacesMap()

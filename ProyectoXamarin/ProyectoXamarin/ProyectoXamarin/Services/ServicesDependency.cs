@@ -23,11 +23,32 @@ namespace ProyectoXamarin.Services
             builder.RegisterType<SessionServices>().SingleInstance();
 
             builder.RegisterType<RepositoryMonument>();
-            builder.RegisterType<ProvinciasViewModel>();
 
             //AÑADIR EL VIEWMODEL
+            builder.RegisterType<UsuarioViewModel>();
+            builder.RegisterType<ProvinciasViewModel>();
+
+            //Vistas
+            builder.RegisterType<MainMasterPage>();
+
 
             this.container = builder.Build();
+        }
+
+        public MainMasterPage MainMasterPage
+        {
+            get
+            {
+                return this.container.Resolve<MainMasterPage>();
+            }
+        }
+
+        public RepositoryMonument RepositoryMonument
+        {
+            get
+            {
+                return this.container.Resolve<RepositoryMonument>();
+            }
         }
 
         public SessionServices SessionService
@@ -35,6 +56,13 @@ namespace ProyectoXamarin.Services
             get
             {
                 return this.container.Resolve<SessionServices>();
+            }
+        }
+        public UsuarioViewModel UsuarioViewModel
+        {
+            get
+            {
+                return this.container.Resolve<UsuarioViewModel>();
             }
         }
         public ProvinciasViewModel ProvinciasViewModel

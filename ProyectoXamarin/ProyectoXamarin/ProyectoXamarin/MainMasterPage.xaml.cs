@@ -39,6 +39,10 @@ namespace ProyectoXamarin
             item.Titulo = "Sobre Nosotros";
             item.PaginaHija = typeof(Info);
             this.MenuPaginas.Add(item);
+            item = new MasterPageItem();
+            item.Titulo = "Registro";
+            item.PaginaHija = typeof(Registro);
+            this.MenuPaginas.Add(item);
             this.lsvmenupaginas.ItemsSource = this.MenuPaginas;
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Inicio)));
             this.lsvmenupaginas.ItemSelected += Lsvmenupaginas_ItemSelected;
