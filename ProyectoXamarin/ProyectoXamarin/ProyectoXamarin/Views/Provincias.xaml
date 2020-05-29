@@ -19,15 +19,17 @@
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <!--<Label Text="Selecciona un pais: "/>-->
-            <!--<Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}"
-                    SelectedIndexChanged="Picker_BindingContextChanged"
-                    x:Name="piki"/>-->
-
+            <Label Text="Selecciona un pais: "/>
+            <Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" x:Name="pickerCountry" SelectedIndexChanged="pickerCountry_SelectedIndexChanged"  />
 
             <Label Text="Selecciona una ciudad "/>
-            <Picker ItemsSource="{Binding City}" ItemDisplayBinding="{Binding CityName}" 
-                    SelectedIndexChanged="pikerciudad_SelectedIndexChanged" x:Name="pikerciudad" />
+            <Picker ItemsSource="{Binding States}" ItemDisplayBinding="{Binding StateName}" x:Name="pickerState" SelectedIndexChanged="pickerState_SelectedIndexChanged"
+                      />
+
+            
+            <Label Text="Selecciona una ciudad "/>
+            <Picker ItemsSource="{Binding City}" ItemDisplayBinding="{Binding CityName}" x:Name="pickerCity" SelectedIndexChanged="pickerCity_SelectedIndexChanged"
+                    />
 
             <!--<Label Text="Selecciona un ciudad: "/>
             <Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" />-->

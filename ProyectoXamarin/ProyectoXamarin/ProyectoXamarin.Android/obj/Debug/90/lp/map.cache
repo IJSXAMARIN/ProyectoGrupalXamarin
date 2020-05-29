@@ -1,4 +1,6 @@
 FormsViewGroup
+Plugin.CurrentActivity
+Plugin.Permissions
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -44,5 +46,3 @@ Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
-Plugin.CurrentActivity
-Plugin.Permissions

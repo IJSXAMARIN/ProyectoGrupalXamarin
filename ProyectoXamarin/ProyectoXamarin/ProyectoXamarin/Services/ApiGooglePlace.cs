@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -173,7 +174,7 @@ namespace ProyectoXamarin.Services
 
         public async Task<List<Place>> GetPlacesByCity(String city)
         {
-            String url = "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=" + city + "&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+            String url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + city + "&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
 
 
             JsonResultGoogleApi jsonResultGoogle = new JsonResultGoogleApi();
@@ -195,7 +196,7 @@ namespace ProyectoXamarin.Services
                     jsonResultGoogle.Places.AddRange(_json.Places);
 
                     // Descomentar siguiente linea para que llame a todos
-                    jsonResultGoogle.NextPageToken = _json.NextPageToken;
+                    //jsonResultGoogle.NextPageToken = _json.NextPageToken;
 
                 }
                 else
@@ -208,7 +209,32 @@ namespace ProyectoXamarin.Services
 
             return jsonResultGoogle.Places;
         }
+
+        public async Task<Position> GetPositionCity(String cityName)
+        {
+            String url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + cityName + "&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+
+
+            using (HttpClient client = new HttpClient())
+            {
+
+                client.DefaultRequestHeaders.Accept.Clear();
+
+                HttpResponseMessage response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    JsonResultGoogleApi json =  await response.Content.ReadAsAsync<JsonResultGoogleApi>();
+
+                    return new Position(json.Places.FirstOrDefault().Geolocation.Location.Latitude, json.Places.FirstOrDefault().Geolocation.Location.Longitude);
+                }
+                else
+                {
+                    return new Position();
+                }
+            }
+        }
        
+
 
     }
 }

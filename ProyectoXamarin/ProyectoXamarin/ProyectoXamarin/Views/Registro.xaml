@@ -28,7 +28,7 @@
             <Label Text="Nick Name: "
                    HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtNickName"
-                   Text="{Binding Usuario.NickName}"                   
+                   Text="{Binding Usuario.NickName}" 
                    HorizontalOptions="FillAndExpand"/>
 
             <Label Text="Contraseña: "

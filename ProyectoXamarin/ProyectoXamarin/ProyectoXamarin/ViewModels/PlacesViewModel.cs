@@ -36,6 +36,7 @@ namespace ProyectoXamarin.ViewModels
         public PlacesViewModel() => this.api = new ApiGooglePlaces();
 
 
+
         public async Task GetPlaces(Position currentPosition)
         {
             // TODO: Pasarle la posición a la api
@@ -48,6 +49,11 @@ namespace ProyectoXamarin.ViewModels
             // TODO: Pasarle la posición a la api
             List<Place> places = await this.api.GetPlacesByCity(city);
             this.Places = new ObservableCollection<Place>(places);
+        }
+
+        public async Task<Position> GetPositionCity(String city)
+        {
+            return await this.api.GetPositionCity(city);
         }
 
         public Place GetPlace(String placeId)
