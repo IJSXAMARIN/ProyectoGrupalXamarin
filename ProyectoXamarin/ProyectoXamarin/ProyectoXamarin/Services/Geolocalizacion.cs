@@ -19,11 +19,9 @@ namespace ProyectoXamarin.Services
                 //PASAR LA UBICACIÓN DEL USUARIO CON EL AWAIT DE ARRIBA
                 //COGER LA LOCALIZACIÓN DEL MONUMENTO PARA MOSTRAR AL USUARIO
                 //LOS METROS QUE LE FALTAN PARA LLEGAR (calcular distancia)
-
                 //Location boston = new Location(42.358056, -71.063611);
                 //Location sanFrancisco = new Location(37.783333, -122.416667);
                 //double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
-
                 Geoloc posicion = new Geoloc();
                 if (location != null)
                 {

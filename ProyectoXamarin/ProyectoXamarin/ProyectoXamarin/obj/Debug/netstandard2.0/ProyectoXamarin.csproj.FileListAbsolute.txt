@@ -1,5 +1,4 @@
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Geolocalizacion.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csproj.CoreCompileInputs.cache
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.AssemblyInfoInputs.cache
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.AssemblyInfo.cs
@@ -39,8 +38,9 @@ C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\PruebasMapa.xaml.g.cs
-C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csprojAssemblyReference.cache
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\ProyectoXamarin.csproj.CoreCompileInputs.cache
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Login.xaml.g.cs
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\LogInView.xaml.g.cs
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Registro.xaml.g.cs

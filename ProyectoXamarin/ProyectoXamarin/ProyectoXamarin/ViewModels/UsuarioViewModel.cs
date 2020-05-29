@@ -5,6 +5,7 @@ using ProyectoXamarin.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ProyectoXamarin.ViewModels
@@ -66,15 +67,17 @@ namespace ProyectoXamarin.ViewModels
                         if (await this.repo.GetToken(Usuario.NickName,
                             Usuario.Password) != null)
                         {
-                            await this.repo.GetToken(Usuario.NickName, Usuario.Password);
-                            Perfil viewMapa = new Perfil();
-                            await
-                                Application.Current.MainPage.Navigation.
-                                PushModalAsync(viewMapa);
+                            String token = await this.repo.GetToken(Usuario.NickName, Usuario.Password);
+                            Perfil perfil = new Perfil(); 
+                            UsrConectadoViewModel viewModel = App.Locator.UsrConectadoViewModel;
+                            viewModel.UsuarioC = await this.repo.PerfilUsuario(token);                                     
+                            perfil.BindingContext = viewModel;
+                            await Application.Current.MainPage.Navigation.PushModalAsync(perfil);
+                            
                             //MessagingCenter.Send(App.Locator.UsuarioViewModel, "REFRESH");
-
                             //await Application.Current.MainPage.
                             //    DisplayAlert("WARNING", "Has sido logueado", "Ok");
+                            
                         }
                         String mensaje = "Credenciales Incorrectas";
                         LogInView view = new LogInView(mensaje);
@@ -83,8 +86,8 @@ namespace ProyectoXamarin.ViewModels
             }
         }
 
-        private Usuario _Usuario;
-        public Usuario Usuario
+        private  Usuario _Usuario;
+        public   Usuario Usuario
         {
             get
             {
@@ -94,7 +97,9 @@ namespace ProyectoXamarin.ViewModels
             {
                 this._Usuario = value;
                 OnPropertyChanged("Usuario");
+            
             }
         }
+
     }
 }

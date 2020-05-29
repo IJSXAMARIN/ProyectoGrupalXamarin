@@ -25,9 +25,8 @@ namespace ProyectoXamarin.Views
 
         private async void btnRedireccion_Clicked_1(object sender, EventArgs e)
         {
-            LogInView view = new LogInView();
-            await
-                Application.Current.MainPage.Navigation.PushModalAsync(view);
+
+            await Application.Current.MainPage.Navigation.PushModalAsync(new LogInView());
         }
     }
 }

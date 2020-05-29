@@ -276,7 +276,6 @@ namespace ProyectoXamarin.Repositories
         {
             String request = "/api/Usuario/perfilusuario";
             Usuario user = await this.CallApi<Usuario>(request, token);
-
             return user;
         }
         public async Task ActualizarUsuario(int id, String nombre, String email,

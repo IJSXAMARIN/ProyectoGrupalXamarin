@@ -60,9 +60,7 @@ namespace ProyectoXamarin.ViewModels
 
             Task.Run(async() => {
             JsonResultGoogleApi json = await this.api.GetDistanceAsync(userPosition, placePosition);
-
                 this.DistanceDuration = json.DistanceRows.FirstOrDefault().DistanceDurations.FirstOrDefault();
-
             }).Wait();
         }
 
@@ -74,10 +72,8 @@ namespace ProyectoXamarin.ViewModels
                 {
                 // TODO: Cambiar origin por posicion de geolocalizacion
                     Position origin = new Position(40.416883, -3.703567);
-
                     Position placePosition = new Position(this.PlaceDetail.Geolocation.Location.Latitude, this.PlaceDetail.Geolocation.Location.Longitude);
-
-                    this.GetDistanceAsync(origin, placePosition);
+                     this.GetDistanceAsync(origin, placePosition);
                 });
             }
         }

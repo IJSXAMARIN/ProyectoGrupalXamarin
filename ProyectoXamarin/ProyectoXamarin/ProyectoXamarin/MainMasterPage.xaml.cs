@@ -1,4 +1,5 @@
-﻿using ProyectoXamarin.Views;
+﻿using ProyectoXamarin.ViewModels;
+using ProyectoXamarin.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,17 +32,22 @@ namespace ProyectoXamarin
             item.Titulo = "Mapa";
             item.PaginaHija = typeof(PruebasMapa);
             this.MenuPaginas.Add(item);
+            UsrConectadoViewModel viewModel = new UsrConectadoViewModel();
+            //HAY QUE REFRESCAR PARA QUE MUESTRE
+            if (viewModel.UsuarioC != null)
+            {
+                item = new MasterPageItem();
+                item.Titulo = "Perfil";
+                item.PaginaHija = typeof(Perfil);
+                this.MenuPaginas.Add(item);
+            }
             item = new MasterPageItem();
             item.Titulo = "Perfil";
-            item.PaginaHija = typeof(Perfil);
+            item.PaginaHija = typeof(Registro);
             this.MenuPaginas.Add(item);
             item = new MasterPageItem();
             item.Titulo = "Sobre Nosotros";
             item.PaginaHija = typeof(Info);
-            this.MenuPaginas.Add(item);
-            item = new MasterPageItem();
-            item.Titulo = "Registro";
-            item.PaginaHija = typeof(Registro);
             this.MenuPaginas.Add(item);
             this.lsvmenupaginas.ItemsSource = this.MenuPaginas;
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Inicio)));

@@ -18,20 +18,15 @@
                    TextColor="MediumPurple"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
-
             <!--<Label Text="Selecciona un pais: "/>-->
             <!--<Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}"
                     SelectedIndexChanged="Picker_BindingContextChanged"
                     x:Name="piki"/>-->
-
-
             <Label Text="Selecciona una ciudad "/>
             <Picker ItemsSource="{Binding City}" ItemDisplayBinding="{Binding CityName}" 
                     SelectedIndexChanged="pikerciudad_SelectedIndexChanged" x:Name="pikerciudad" />
-
             <!--<Label Text="Selecciona un ciudad: "/>
-            <Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" />-->
-            
+            <Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" />-->          
             <StackLayout>
                 <!--<ListView ItemsSource="{Binding Provincias}">
                     <ListView.ItemTemplate>

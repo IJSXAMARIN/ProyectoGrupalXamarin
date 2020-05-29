@@ -41,8 +41,7 @@
                     TextColor="Green"
                     HorizontalOptions="FillAndExpand"
                     Text="Registrarse"
-                    Command="{Binding RegistroUser}"
-                   />
+                    Command="{Binding RegistroUser}"/>
             <Button BackgroundColor="Orange"
                     TextColor="White"
                     HorizontalOptions="FillAndExpand"
