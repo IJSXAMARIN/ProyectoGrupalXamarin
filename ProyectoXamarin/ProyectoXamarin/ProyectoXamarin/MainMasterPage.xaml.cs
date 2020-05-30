@@ -1,4 +1,5 @@
-﻿using ProyectoXamarin.ViewModels;
+﻿using ProyectoXamarin.Models;
+using ProyectoXamarin.ViewModels;
 using ProyectoXamarin.Views;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -49,9 +50,32 @@ namespace ProyectoXamarin
         private void Lsvmenupaginas_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             IsPresented = false;
+
             MasterPageItem item = (MasterPageItem)e.SelectedItem;
+            if (item.PaginaHija == typeof(PruebasMapa))
+            {
+                try
+                {
+                    var task = Geolocation.GetLastKnownLocationAsync();
+                    GeolocViewModel.Geo = new Geoloc();
+                    task.ContinueWith(x =>
+                    {
+                        var location = x.Result;
+                        if (location != null)
+                        {
+                            GeolocViewModel.Geo.Latitud = location.Latitude;
+                            GeolocViewModel.Geo.Longitud = location.Longitude;
+                            GeolocViewModel.AskForPermission();
+                        }
+                    }, TaskScheduler.FromCurrentSynchronizationContext());
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             Type pagina = item.PaginaHija;
-            Detail = new NavigationPage((Page)Activator.CreateInstance(pagina));           
+            Detail = new NavigationPage((Page)Activator.CreateInstance(pagina));
         }
     }
 }

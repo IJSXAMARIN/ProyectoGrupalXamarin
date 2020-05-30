@@ -29,7 +29,7 @@ namespace ProyectoXamarin.Views
 
         private void btnmapa_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new Mapa()) };
+            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new PruebasMapa()) };
         }
     }
 }

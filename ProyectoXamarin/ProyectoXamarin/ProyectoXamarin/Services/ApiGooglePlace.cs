@@ -13,7 +13,7 @@ namespace ProyectoXamarin.Services
     public class ApiGooglePlaces
     {
 
-        public Geolocalizacion geo;
+     
 
         private readonly string globalUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch";
 
@@ -32,7 +32,7 @@ namespace ProyectoXamarin.Services
         string request = "";
         public ApiGooglePlaces()
         {
-            this.geo = new Geolocalizacion();
+         
 
             this.request = pruebaLocation + "&" + fields + "&key=" + ApiKey;
 
