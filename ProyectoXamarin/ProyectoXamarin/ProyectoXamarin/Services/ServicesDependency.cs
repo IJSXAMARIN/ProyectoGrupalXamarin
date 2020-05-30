@@ -27,6 +27,7 @@ namespace ProyectoXamarin.Services
             //AÑADIR EL VIEWMODEL
             builder.RegisterType<UsuarioViewModel>();
             builder.RegisterType<ProvinciasViewModel>();
+            builder.RegisterType<UsrConectadoViewModel>();
 
             //Vistas
             builder.RegisterType<MainMasterPage>();
@@ -72,5 +73,15 @@ namespace ProyectoXamarin.Services
                 return this.container.Resolve<ProvinciasViewModel>();
             }
         }
+
+        public UsrConectadoViewModel UsrConectadoViewModel
+        {
+            get
+            {
+                return this.container.Resolve<UsrConectadoViewModel>();
+            }
+        }
+
+
     }
 }

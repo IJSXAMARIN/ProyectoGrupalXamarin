@@ -21,7 +21,6 @@ namespace ProyectoXamarin
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainMasterPage();
         }
 

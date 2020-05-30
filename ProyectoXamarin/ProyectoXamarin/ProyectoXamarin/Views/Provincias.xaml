@@ -6,29 +6,33 @@
              mc:Ignorable="d"
              xmlns:local="clr-namespace:ProyectoXamarin"
              BindingContext="{Binding Source={x:Static local:App.Locator}, Path=ProvinciasViewModel}"
-             x:Class="ProyectoXamarin.Views.Provincias">
+             x:Class="ProyectoXamarin.Views.Provincias"
+             BackgroundImageSource="provinciasp.jpg">
     <ContentPage.Content>
         <StackLayout>
             <!--<StackLayout.BindingContext>
                 <viewmodel:ProvinciasViewModel/>
             </StackLayout.BindingContext>-->
-            <Label Text="Selecciona una provincia"
+            <Label Text="¿Que quiere visitar?"
                    FontSize="20"
                    Padding="10"
-                   TextColor="MediumPurple"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Label Text="Selecciona un pais: "/>
-            <Picker ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" x:Name="pickerCountry" SelectedIndexChanged="pickerCountry_SelectedIndexChanged"  />
+            <Label Text="Selecciona un pais: " FontSize="Medium" Margin="20,0,20,0"/>
+            <Picker BackgroundColor="White" Opacity="0.5"  ItemsSource="{Binding Countrys}" ItemDisplayBinding="{Binding CountryName}" x:Name="pickerCountry" SelectedIndexChanged="pickerCountry_SelectedIndexChanged"  />
 
-            <Label Text="Selecciona una ciudad "/>
-            <Picker ItemsSource="{Binding States}" ItemDisplayBinding="{Binding StateName}" x:Name="pickerState" SelectedIndexChanged="pickerState_SelectedIndexChanged"
+            <Label Text="Selecciona un estado: " FontSize="Medium"  Margin="20,0,20,0"/>
+            <Picker ItemsSource="{Binding States}" 
+                    ItemDisplayBinding="{Binding StateName}" x:Name="pickerState" SelectedIndexChanged="pickerState_SelectedIndexChanged"
+                    BackgroundColor="White" Opacity="0.5"
                       />
 
-            
-            <Label Text="Selecciona una ciudad "/>
-            <Picker ItemsSource="{Binding City}" ItemDisplayBinding="{Binding CityName}" x:Name="pickerCity" SelectedIndexChanged="pickerCity_SelectedIndexChanged"
+
+            <Label Text="Selecciona una ciudad: " FontSize="Medium"  Margin="20,0,20,0"/>
+            <Picker ItemsSource="{Binding City}" 
+                    BackgroundColor="White" Opacity="0.5"
+                    ItemDisplayBinding="{Binding CityName}" x:Name="pickerCity" SelectedIndexChanged="pickerCity_SelectedIndexChanged"
                     />
 
             <!--<Label Text="Selecciona un ciudad: "/>

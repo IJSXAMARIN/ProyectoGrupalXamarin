@@ -9,10 +9,8 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu Principal">
             <StackLayout Orientation="Vertical">
-                <StackLayout BackgroundColor="#E89C4D" HeightRequest="50">
-                    <Label FontSize="20" TextColor="White" 
-                       HorizontalOptions="CenterAndExpand" 
-                       VerticalOptions="CenterAndExpand" Text="Master Details"/>
+                <StackLayout>
+                    <Image Source="master.jpg"/>
                 </StackLayout>
                 <StackLayout>
                     <ListView RowHeight="60" x:Name="lsvmenupaginas">

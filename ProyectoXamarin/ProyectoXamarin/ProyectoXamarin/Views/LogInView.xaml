@@ -7,28 +7,51 @@
              xmlns:local="clr-namespace:ProyectoXamarin"
              BindingContext="{Binding Source={x:Static local:App.Locator},
                 Path=UsuarioViewModel}"
-             x:Class="ProyectoXamarin.Views.LogInView">
+             x:Class="ProyectoXamarin.Views.LogInView"
+             BackgroundImageSource="login.jpg">
     <ContentPage.Content>
+
         <StackLayout>
             <Label Text="Log In"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" />
+                   FontSize="Medium"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" Margin="0,100,0,0"/>
             <Label Text="Nick Name: "
-                   HorizontalOptions="FillAndExpand"/>
+                  Margin="40,0,40,0"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
             <Entry x:Name="txtNickName"
+                           Margin="40,0,40,0"
                    Text="{Binding Usuario.NickName}"                   
                    HorizontalOptions="FillAndExpand"/>
 
             <Label Text="Contraseña: "
+                     Margin="40,0,40,0"
+                   VerticalOptions="Center"
                    HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtPass"
+                     Margin="40,0,40,0"
+                   VerticalOptions="Center"
                    Text="{Binding Usuario.Password}"                   
                    HorizontalOptions="FillAndExpand"/>
-            <Button BackgroundColor="LightGreen"
-                    TextColor="Green"
-                    HorizontalOptions="FillAndExpand"
+            <Button BackgroundColor="#BFE9FA"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HeightRequest="40"
                     Text="Log in"
+                    Opacity="0.7"
                     Command="{Binding Login}"/>
+            <Button BackgroundColor="#D7D288"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HeightRequest="40"
+                    Opacity="0.8"
+                    Clicked="Button_Clicked"
+                    Text="¿No tienes cuenta, Registrate?"
+                    />
             <Label x:Name="lblMensaje"
                    TextColor="Orange"
                    FontSize="25"/>
