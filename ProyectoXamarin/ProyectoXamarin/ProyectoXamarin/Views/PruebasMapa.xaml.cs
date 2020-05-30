@@ -69,19 +69,7 @@ namespace ProyectoXamarin.Views
             //   MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567),Distance.FromMeters(5000)));
 
 
-            Circle circle = new Circle
-            {
-                // TODO: La posición es la geolocation del móvil
-                Center = new Position(GeolocViewModel.Geo.Latitud,
-                    GeolocViewModel.Geo.Longitud),
-                // Center = new Position(37.4219983333333, -122.084),
-                Radius = new Xamarin.Forms.Maps.Distance(1000),
-                StrokeColor = Color.FromHex("#88FF0000"),
-                StrokeWidth = 8,
-                FillColor = Color.FromHex("#88FFC0CB")
-            };
-
-            MyMap.MapElements.Add(circle);
+          
 
             // TODO: La posición es la geolocation del móvil
 
@@ -100,6 +88,18 @@ namespace ProyectoXamarin.Views
                 position = await this.viewModel.GetPositionCity(cityName);
             }
 
+            Circle circle = new Circle
+            {
+                // TODO: La posición es la geolocation del móvil
+                Center = position,
+                // Center = new Position(37.4219983333333, -122.084),
+                Radius = new Xamarin.Forms.Maps.Distance(1000),
+                StrokeColor = Color.FromHex("#88FF0000"),
+                StrokeWidth = 8,
+                FillColor = Color.FromHex("#88FFC0CB")
+            };
+
+            MyMap.MapElements.Add(circle);
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Xamarin.Forms.Maps.Distance.FromMeters(2000)));
 
             foreach (Place place in this.viewModel.Places)
