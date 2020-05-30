@@ -77,24 +77,34 @@ namespace ProyectoXamarin.Views
 
                 position = new Position(GeolocViewModel.Geo.Latitud, GeolocViewModel.Geo.Longitud);
 
+                this.footerLayout.IsVisible = true;
+
             }
             else
             {
                 await this.viewModel.GetPlacesByCity(cityName);
                 position = await this.viewModel.GetPositionCity(cityName);
+
+                this.footerLayout.IsVisible = false;
             }
 
-            Circle circle = new Circle
+            if(String.IsNullOrEmpty(cityName))
             {
-              
-                Center = position,
-                Radius = new Xamarin.Forms.Maps.Distance(1000),
-                StrokeColor = Color.FromHex("#88FF0000"),
-                StrokeWidth = 8,
-                FillColor = Color.FromHex("#88FFC0CB")
-            };
+                Circle circle = new Circle
+                {
 
-            MyMap.MapElements.Add(circle);
+                    Center = position,
+                    Radius = new Xamarin.Forms.Maps.Distance(1000),
+                    StrokeColor = Color.FromHex("#88FF0000"),
+                    StrokeWidth = 8,
+                    FillColor = Color.FromHex("#88FFC0CB")
+                };
+
+                MyMap.MapElements.Add(circle);
+            }
+           
+
+          
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Xamarin.Forms.Maps.Distance.FromMeters(2000)));
 
             foreach (Place place in this.viewModel.Places)

@@ -11,16 +11,19 @@
         <renderers:CustomMap x:Name="MyMap">
            
         </renderers:CustomMap>
-        <Button Text="Actualizar" 
+        <StackLayout x:Name="footerLayout">
+            <Button Text="Actualizar" 
                 x:Name="btnActualizar" 
                 Clicked="btnActualizar_Clicked"
                 BackgroundColor="Orange"
-                TextColor="White"/>
-        <Button Text="Simulación" 
+                TextColor="White" />
+            <Button Text="Simulación" 
                 x:Name="btnSimulacion" 
                 Clicked="btnSimulacion_Clicked"
                 BackgroundColor="LightGreen"
                 TextColor="Green"/>
+        </StackLayout>
+      
 
         <Switch x:Name="swithMap" IsToggled="False"/>
     </StackLayout>
