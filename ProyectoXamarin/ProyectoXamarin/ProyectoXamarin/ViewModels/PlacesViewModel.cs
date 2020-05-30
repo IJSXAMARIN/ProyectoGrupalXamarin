@@ -37,10 +37,10 @@ namespace ProyectoXamarin.ViewModels
 
 
 
-        public async Task GetPlaces(Position currentPosition)
+        public async Task GetPlaces(Geoloc currentPosition)
         {
             // TODO: Pasarle la posición a la api
-            List<Place> places = await this.api.GetPlaces();
+            List<Place> places = await this.api.GetPlaces(currentPosition);
             this.Places = new ObservableCollection<Place>(places);
         }
 

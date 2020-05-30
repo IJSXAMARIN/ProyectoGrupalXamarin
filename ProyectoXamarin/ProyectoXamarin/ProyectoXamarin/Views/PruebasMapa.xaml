@@ -15,7 +15,17 @@
                 </DataTemplate>
             </map:Map.ItemTemplate>
         </renderers:CustomMap>
-        <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked" />
+        <Button Text="Actualizar" 
+                x:Name="btnActualizar" 
+                Clicked="btnActualizar_Clicked"
+                BackgroundColor="Orange"
+                TextColor="White"/>
+        <Button Text="Simulación" 
+                x:Name="btnSimulacion" 
+                Clicked="btnSimulacion_Clicked"
+                BackgroundColor="LightGreen"
+                TextColor="Green"/>
+
         <Switch x:Name="swithMap" IsToggled="False"/>
     </StackLayout>
 </ContentPage>

@@ -38,14 +38,15 @@ namespace ProyectoXamarin.Services
 
         }
 
-        public async Task<List<Place>> GetPlaces() // TODO: El método tiene que recibir -> Position position
+        public async Task<List<Place>> GetPlaces(Geoloc geo) // TODO: El método tiene que recibir -> Position position
         {
-            Geoloc geo = await this.geo.GetLoc<Geoloc>();
+          //  Geoloc geo = await this.geo.GetLoc<Geoloc>();
 
             JsonResultGoogleApi jsonResultGoogle = new JsonResultGoogleApi();
 
-            String request = "/json?location=" + geo.Latitud + "," + geo.Longitud + "&radius=50000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
 
+            String request = "/json?location=" + geo.Latitud.ToString().Replace(',', '.') + "," + geo.Longitud.ToString().Replace(',', '.')
+                + "&radius=5000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
             do
             {
                 JsonResultGoogleApi _json = new JsonResultGoogleApi();

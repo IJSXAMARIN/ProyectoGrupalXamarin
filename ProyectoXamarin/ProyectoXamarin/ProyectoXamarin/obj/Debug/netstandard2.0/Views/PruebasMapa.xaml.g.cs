@@ -23,6 +23,9 @@ namespace ProyectoXamarin.Views {
         private global::Xamarin.Forms.Button btnActualizar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button btnSimulacion;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Switch swithMap;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -30,6 +33,7 @@ namespace ProyectoXamarin.Views {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PruebasMapa));
             MyMap = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::ProyectoXamarin.Maps.CustomMap>(this, "MyMap");
             btnActualizar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnActualizar");
+            btnSimulacion = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnSimulacion");
             swithMap = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "swithMap");
         }
     }

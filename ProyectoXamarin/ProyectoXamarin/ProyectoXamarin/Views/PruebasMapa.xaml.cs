@@ -19,15 +19,34 @@ namespace ProyectoXamarin.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PruebasMapa : ContentPage
     {
-
         private PlacesViewModel viewModel;
+
+        public PruebasMapa()
+        {
+            InitializeComponent();
+
+            this.viewModel = new PlacesViewModel();
+
+            Task.Run(async () => await SetPlacesMap(null)).Wait();
+
+            swithMap.Toggled += (sender, e) =>
+            {
+                if (e.Value)
+                {
+                    MyMap.MapType = MapType.Satellite;
+                }
+                else
+                {
+                    MyMap.MapType = MapType.Street;
+                }
+            };
+        }
 
         public PruebasMapa(String cityName)
         {
             InitializeComponent();
 
             this.viewModel = new PlacesViewModel();
-
 
             Task.Run(async () => await SetPlacesMap(cityName)).Wait();
 
@@ -46,15 +65,16 @@ namespace ProyectoXamarin.Views
 
         public async Task SetPlacesMap(String cityName)
         {
-
-
             // var loc = await Xamarin.Essentials.Geolocation.GetLocationAsync();
             //   MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567),Distance.FromMeters(5000)));
+
 
             Circle circle = new Circle
             {
                 // TODO: La posición es la geolocation del móvil
-                Center = new Position(40.416883, -3.703567),
+                Center = new Position(GeolocViewModel.Geo.Latitud,
+                    GeolocViewModel.Geo.Longitud),
+                // Center = new Position(37.4219983333333, -122.084),
                 Radius = new Xamarin.Forms.Maps.Distance(1000),
                 StrokeColor = Color.FromHex("#88FF0000"),
                 StrokeWidth = 8,
@@ -65,62 +85,51 @@ namespace ProyectoXamarin.Views
 
             // TODO: La posición es la geolocation del móvil
 
-
             Position position = new Position();
 
-            if(String.IsNullOrEmpty(cityName))
+            if (String.IsNullOrEmpty(cityName))
             {
-                await this.viewModel.GetPlaces(new Position(1.0, 1.0)); await this.viewModel.GetPlaces(new Position(1.0, 1.0));
+                await this.viewModel.GetPlaces(GeolocViewModel.Geo);
 
-                position = new Position(40.416883, -3.703567);
+                position = new Position(GeolocViewModel.Geo.Latitud, GeolocViewModel.Geo.Longitud);
 
-            } else 
+            }
+            else
             {
                 await this.viewModel.GetPlacesByCity(cityName);
                 position = await this.viewModel.GetPositionCity(cityName);
-
             }
 
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(position, Xamarin.Forms.Maps.Distance.FromMeters(2000)));
 
             foreach (Place place in this.viewModel.Places)
             {
-
                 CustomPin pin = new CustomPin();
                 pin.Address = place.Vicinity;
                 pin.Position = new Position(place.Geolocation.Location.Latitude, place.Geolocation.Location.Longitude);
                 pin.Label = place.PlaceName;
                 pin.AutomationId = place.PlaceId;
                 pin.Visitado = place.Visitado;
-              //  pin.Type = PinType.SavedPin;
-              
+                //  pin.Type = PinType.SavedPin;
+
                 pin.MarkerClicked += async (s, args) => { await Pin_MarkerClicked(s, args); };
                 MyMap.Pins.Add(pin);
 
             }
         }
 
-
         private async Task Pin_MarkerClicked(object sender, PinClickedEventArgs e)
         {
-
             string placeId = ((Pin)sender).AutomationId;
-
             Place _place = this.viewModel.GetPlace(placeId);
-
-
             // Comprobar si ya se ha "descubierto". Si lo tenemos guardado en la database
             _place = await this.viewModel.LoadImagePlace(_place);
-
-
             PlaceDetailsModal details = new PlaceDetailsModal();
-
             PlaceDetailViewModel _viewModel = new PlaceDetailViewModel();
-          
+
             _viewModel.PlaceDetail = new PlaceDetails()
             {
                 // TODO: LLamar bbdd y ver si ya está guardado
-
                 Descubierto = false,
                 Geolocation = _place.Geolocation,
                 Photos = _place.Photos,
@@ -128,20 +137,23 @@ namespace ProyectoXamarin.Views
                 PlaceId = _place.PlaceId,
                 PlaceName = _place.PlaceName,
                 Vicinity = _place.Vicinity,
-
             };
-
             details.BindingContext = _viewModel;
-
             await Navigation.PushModalAsync(details, true);
         }
-
-
-
-
         private void btnActualizar_Clicked(object sender, EventArgs e)
         {
-            Task.Run(() => this.SetPlacesMap("").Wait());
+            Task.Run(() => this.SetPlacesMap(null).Wait());
+        }
+
+        private async void btnSimulacion_Clicked(object sender, EventArgs e)
+        {
+            //string coordenadasPuertaSol = "40.416883, -3.703567";
+            Geoloc loc = new Geoloc();
+            GeolocViewModel.Geo.Latitud = 40.416883;
+            GeolocViewModel.Geo.Longitud = -3.703567;
+
+            await this.SetPlacesMap(null);
         }
     }
 }
