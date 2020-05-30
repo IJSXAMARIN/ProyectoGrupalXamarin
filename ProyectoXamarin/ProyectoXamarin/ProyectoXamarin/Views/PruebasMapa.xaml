@@ -5,15 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:renderers="clr-namespace:ProyectoXamarin.Maps"
-             xmlns:map ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+            
              x:Class="ProyectoXamarin.Views.PruebasMapa">
     <StackLayout>
         <renderers:CustomMap x:Name="MyMap">
-            <map:Map.ItemTemplate>
-                <DataTemplate>
-                    <map:Pin Position="{Binding Position}" Address="{Binding Address}" Label="{Binding PlaceName}" />
-                </DataTemplate>
-            </map:Map.ItemTemplate>
+           
         </renderers:CustomMap>
         <Button Text="Actualizar" 
                 x:Name="btnActualizar" 

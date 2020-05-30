@@ -117,7 +117,6 @@ namespace ProyectoXamarin.Services
         
 
                 client.DefaultRequestHeaders.Accept.Clear();
-            
                 String url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoReference + "&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
 
                 HttpResponseMessage response = await client.GetAsync(url);

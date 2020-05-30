@@ -18,7 +18,7 @@ namespace ProyectoXamarin.Droid.Renderers
 {
     public class CustomMapRenderer : MapRenderer, GoogleMap.IInfoWindowAdapter
     {
-        private List<Pin> pins;
+        public List<Pin> pins;
         public CustomMapRenderer(Context context) : base(context)
         {
 
@@ -50,18 +50,18 @@ namespace ProyectoXamarin.Droid.Renderers
 
         protected override MarkerOptions CreateMarker(Pin pin)
         {
-            CustomPin custom = (CustomPin)pin;
+            //CustomPin custom = (CustomPin)pin;
 
             var marker = new MarkerOptions();
             marker.SetPosition(new LatLng(pin.Position.Latitude, pin.Position.Longitude));
             marker.SetTitle(pin.Label);
             marker.SetSnippet(pin.Address);
-            if (custom.Visitado)
+            if (pin.Type == PinType.Place)
             {
                 marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
             }
 
-          //  marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
+            //  marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
             return marker;
         }
 
@@ -81,40 +81,45 @@ namespace ProyectoXamarin.Droid.Renderers
             return pins.FirstOrDefault(x => x.Position.Latitude == marker.Position.Latitude && x.Position.Longitude == marker.Position.Longitude);
         }
 
-        public Android.Views.View GetInfoContents(Marker marker)
+        //public Android.Views.View GetInfoContents(Marker marker)
+        //{
+        //    var inflater = Android.App.Application.Context.GetSystemService(Context.LayoutInflaterService) as Android.Views.LayoutInflater;
+        //    if (inflater != null)
+        //    {
+        //        Android.Views.View view;
+
+        //        var customPin = GetCustomPin(marker);
+        //        if (customPin == null)
+        //        {
+        //            throw new Exception("Custom pin not found");
+        //        }
+
+        //        // Lets load the MapInfoWindow to show the place information into the map
+        //        view = inflater.Inflate(Resource.Layout.MapInfoWindow, null);
+
+        //        TextView infoTitle = view.FindViewById<TextView>(Resource.Id.InfoWindowTitle);
+        //        var infoSubtitle = view.FindViewById<TextView>(Resource.Id.InfoWindowSubtitle);
+
+        //        if (infoTitle != null)
+        //        {
+        //            infoTitle.Text = marker.Title;
+        //        }
+        //        if (infoSubtitle != null)
+        //        {
+        //            infoSubtitle.Text = marker.Snippet;
+        //        }
+
+        //        return view;
+        //    }
+        //    return null;
+        //}
+
+        public Android.Views.View GetInfoWindow(Marker marker)
         {
-            var inflater = Android.App.Application.Context.GetSystemService(Context.LayoutInflaterService) as Android.Views.LayoutInflater;
-            if (inflater != null)
-            {
-                Android.Views.View view;
-
-                var customPin = GetCustomPin(marker);
-                if (customPin == null)
-                {
-                    throw new Exception("Custom pin not found");
-                }
-
-                // Lets load the MapInfoWindow to show the place information into the map
-                view = inflater.Inflate(Resource.Layout.MapInfoWindow, null);
-
-                TextView infoTitle = view.FindViewById<TextView>(Resource.Id.InfoWindowTitle);
-                var infoSubtitle = view.FindViewById<TextView>(Resource.Id.InfoWindowSubtitle);
-
-                if (infoTitle != null)
-                {
-                    infoTitle.Text = marker.Title;
-                }
-                if (infoSubtitle != null)
-                {
-                    infoSubtitle.Text = marker.Snippet;
-                }
-
-                return view;
-            }
             return null;
         }
 
-        public Android.Views.View GetInfoWindow(Marker marker)
+        public Android.Views.View GetInfoContents(Marker marker)
         {
             return null;
         }

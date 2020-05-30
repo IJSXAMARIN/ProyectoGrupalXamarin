@@ -65,14 +65,10 @@ namespace ProyectoXamarin.Views
 
         public async Task SetPlacesMap(String cityName)
         {
-            // var loc = await Xamarin.Essentials.Geolocation.GetLocationAsync();
-            //   MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(40.416883, -3.703567),Distance.FromMeters(5000)));
 
+            MyMap.Pins.Clear();
 
           
-
-            // TODO: La posición es la geolocation del móvil
-
             Position position = new Position();
 
             if (String.IsNullOrEmpty(cityName))
@@ -90,9 +86,8 @@ namespace ProyectoXamarin.Views
 
             Circle circle = new Circle
             {
-                // TODO: La posición es la geolocation del móvil
+              
                 Center = position,
-                // Center = new Position(37.4219983333333, -122.084),
                 Radius = new Xamarin.Forms.Maps.Distance(1000),
                 StrokeColor = Color.FromHex("#88FF0000"),
                 StrokeWidth = 8,
@@ -104,18 +99,20 @@ namespace ProyectoXamarin.Views
 
             foreach (Place place in this.viewModel.Places)
             {
-                CustomPin pin = new CustomPin();
+                Pin pin = new Pin();
                 pin.Address = place.Vicinity;
                 pin.Position = new Position(place.Geolocation.Location.Latitude, place.Geolocation.Location.Longitude);
                 pin.Label = place.PlaceName;
                 pin.AutomationId = place.PlaceId;
-                pin.Visitado = place.Visitado;
+                pin.Type = place.Visitado ? PinType.SavedPin : PinType.Place;
+              //  pin.Visitado = place.Visitado;
                 //  pin.Type = PinType.SavedPin;
 
                 pin.MarkerClicked += async (s, args) => { await Pin_MarkerClicked(s, args); };
                 MyMap.Pins.Add(pin);
-
             }
+
+            
         }
 
         private async Task Pin_MarkerClicked(object sender, PinClickedEventArgs e)

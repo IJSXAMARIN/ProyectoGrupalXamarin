@@ -9,5 +9,6 @@ namespace ProyectoXamarin.Maps
     {
 
         public List<CustomPin> CustomPins { get; set; }
+
     }
 }
