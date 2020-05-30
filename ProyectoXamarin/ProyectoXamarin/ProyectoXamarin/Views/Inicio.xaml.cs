@@ -16,5 +16,20 @@ namespace ProyectoXamarin.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new Provincias()) };
+        }
+
+        private void btnperfil_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new LogInView()) };
+        }
+
+        private void btnmapa_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new Mapa()) };
+        }
     }
 }

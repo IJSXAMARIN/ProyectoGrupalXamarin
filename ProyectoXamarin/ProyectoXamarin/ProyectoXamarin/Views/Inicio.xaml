@@ -4,17 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ProyectoXamarin.Views.Inicio">
+             x:Class="ProyectoXamarin.Views.Inicio"
+             BackgroundImageSource="wp.png">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Label Text="Monument Play"
+                <Frame CornerRadius="30" Margin="20">
+                    <StackLayout>
+                        <Label Text="Monument Play"
+                       TextColor="Black"
                                   FontFamily="Arial"
                 VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Gray" Padding="10"/>
-            <Frame CornerRadius="30">
-                <Image Source="Portada.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
-            </Frame>
+                HorizontalOptions="CenterAndExpand" FontSize="30" />
+                    <Image Source="Portada.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+                    </StackLayout>
+                </Frame>
 
 
             <Frame BorderColor="Gray"
@@ -31,9 +35,10 @@
              HorizontalOptions="Fill" />
                     <Label Text="Gracias a nuestra aplicacion haz que tus viajes sean mas emocionantes encontrando los monumentos y puntos de interes mas importante de la zona!" FontSize="17"
                                           FontFamily="Arial"/>
-                    <Image Source="tajeta.png" HeightRequest="250" 
+                    <Image Source="tarjeta.jpg" HeightRequest="250" 
                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
-                </StackLayout>
+                        <Button Text="Explorar mapa" Clicked="btnmapa_Clicked"  x:Name="btnmapa" HeightRequest="40" HorizontalOptions="Center" CornerRadius="10" BackgroundColor="#64CF79"/>
+                    </StackLayout>
             </Frame>
                 <Frame BorderColor="Gray"
        CornerRadius="5"
@@ -48,13 +53,14 @@
                         <Label Text="Inicia sesion en tu  perfil y visualiza los datos de tus viajes y monumentos visitados!" FontSize="17"  FontFamily="Arial"/>
                         <Image Source="Perfil.jpg" HeightRequest="250" 
                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
+                        <Button Text="Mi perfil" Clicked="btnperfil_Clicked"  x:Name="btnperfil" HeightRequest="40" HorizontalOptions="Center" CornerRadius="10" BackgroundColor="#F8D582"/>
                     </StackLayout>
                 </Frame>
                 <Frame BorderColor="Gray"
        CornerRadius="5"
        Padding="10" Margin="10">
                     <StackLayout>
-                        <Label Text="Elige!"
+                        <Label Text="¿Que quieres visitar?"
            FontSize="Medium"
            FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                         <BoxView Color="Gray"
@@ -63,6 +69,7 @@
                         <Label Text="Elige el lugar que vas a visitar para ver todo lo que necesites de manera personalizada" FontSize="17"  FontFamily="Arial"/>
                         <Image Source="pais.jpg" HeightRequest="200" 
                            HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="10"/>
+                        <Button Text="Elegir Provincia" Clicked="Button_Clicked"   HeightRequest="40" HorizontalOptions="Center" CornerRadius="10" BackgroundColor="#80B3EE"/>
                     </StackLayout>
                 </Frame>
             </StackLayout>

@@ -44,8 +44,7 @@ namespace ProyectoXamarin.ViewModels
                         //await Application.Current.MainPage.
                         //    DisplayAlert("WARNING", "Insertado", "Ok");
                         LogInView view = new LogInView();
-                        await
-                            Application.Current.MainPage.Navigation.PushModalAsync(view);
+                        App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(view) };
                     }
                 });
             }
@@ -72,12 +71,12 @@ namespace ProyectoXamarin.ViewModels
                             UsrConectadoViewModel viewModel = App.Locator.UsrConectadoViewModel;
                             viewModel.UsuarioC = await this.repo.PerfilUsuario(token);                                     
                             perfil.BindingContext = viewModel;
-                            await Application.Current.MainPage.Navigation.PushModalAsync(perfil);
-                            
+                            //await Application.Current.MainPage.Navigation.PushModalAsync(perfil);
+                            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(perfil)};
                             //MessagingCenter.Send(App.Locator.UsuarioViewModel, "REFRESH");
                             //await Application.Current.MainPage.
                             //    DisplayAlert("WARNING", "Has sido logueado", "Ok");
-                            
+
                         }
                         String mensaje = "Credenciales Incorrectas";
                         LogInView view = new LogInView(mensaje);

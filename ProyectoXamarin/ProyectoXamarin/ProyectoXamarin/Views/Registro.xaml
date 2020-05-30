@@ -7,47 +7,59 @@
               xmlns:local="clr-namespace:ProyectoXamarin"
              BindingContext="{Binding Source={x:Static local:App.Locator},
                 Path=UsuarioViewModel}"
-             x:Class="ProyectoXamarin.Views.Registro">
+             x:Class="ProyectoXamarin.Views.Registro"
+             BackgroundImageSource="login.jpg">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Registro"
+            <Label Text="REGISTRO"
+                   TextColor="black"
+                   Margin="0,30,0,20"
+                   FontSize="Small"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
             <Label Text="Nombre de usuario: "
-                   HorizontalOptions="FillAndExpand"/>
+                   HorizontalOptions="FillAndExpand"
+                    Margin="40,0,40,0"/>
             <Entry x:Name="txtUserName"
+                       Margin="40,0,40,0"
                    Text="{Binding Usuario.NombreUs}"
                    HorizontalOptions="FillAndExpand"/>
 
             <Label Text="Email: "
+                       Margin="40,0,40,0"  
                    HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtEmail"
+                      Margin="40,0,40,0"
+                     
                    Text="{Binding Usuario.Email}"                   
                    HorizontalOptions="FillAndExpand"/>
 
             <Label Text="Nick Name: "
+                       
+                      Margin="40,0,40,0"
                    HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtNickName"
+                      Margin="40,0,40,0"        
                    Text="{Binding Usuario.NickName}" 
                    HorizontalOptions="FillAndExpand"/>
 
             <Label Text="Contraseña: "
+                      Margin="40,0,40,0"
+             
                    HorizontalOptions="FillAndExpand"/>
             <Entry x:Name="txtPass"
+                      Margin="40,0,40,0"
                    Text="{Binding Usuario.Password}"                   
                    HorizontalOptions="FillAndExpand"/>
 
-            <Button BackgroundColor="LightGreen"
-                    TextColor="Green"
-                    HorizontalOptions="FillAndExpand"
+            <Button BackgroundColor="#96803E"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    HeightRequest="50"         
+                    Opacity="0.9"
                     Text="Registrarse"
                     Command="{Binding RegistroUser}"/>
-            <Button BackgroundColor="Orange"
-                    TextColor="White"
-                    HorizontalOptions="FillAndExpand"
-                    Text="Log in"
-                    x:Name="btnRedireccion"
-                    Clicked="btnRedireccion_Clicked_1"/>
             <Label x:Name="lblMensaje"
                    TextColor="Orange"
                    FontSize="25"/>

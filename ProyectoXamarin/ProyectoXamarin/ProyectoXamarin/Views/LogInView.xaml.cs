@@ -22,5 +22,10 @@ namespace ProyectoXamarin.Views
             InitializeComponent();
             this.lblMensaje.Text = mensaje;
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new MainMasterPage { Detail = new NavigationPage(new Registro()) };
+        }
     }
 }
