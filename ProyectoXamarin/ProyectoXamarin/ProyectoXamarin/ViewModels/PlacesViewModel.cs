@@ -45,6 +45,11 @@ namespace ProyectoXamarin.ViewModels
 
             RepositoryMonument repo = new RepositoryMonument();
 
+            foreach(Place place in places)
+            {
+                place.Visitado = repo.MonumentoVisitado(UsrConectadoViewModel.IdUsuario, place.PlaceId).Result;
+            }
+
           /*  Parallel.ForEach(places, place =>
             {
                 place.Visitado = repo.MonumentoVisitado(0, place.PlaceId).Result;

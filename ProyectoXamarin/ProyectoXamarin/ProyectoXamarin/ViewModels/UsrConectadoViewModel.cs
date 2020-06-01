@@ -18,6 +18,7 @@ namespace ProyectoXamarin.ViewModels
             set
             {
                 this._UsuarioC = value;
+                IdUsuario = this._UsuarioC.IdUser;
                 OnPropertyChanged("UsuarioC");
             }
         }
@@ -34,5 +35,7 @@ namespace ProyectoXamarin.ViewModels
                 OnPropertyChanged("ListaMonu");
             }
         }
+
+        public static int IdUsuario;
     }
 }
