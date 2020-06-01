@@ -4,17 +4,48 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ProyectoXamarin.Views.Info">
+             x:Class="ProyectoXamarin.Views.Info"
+             BackgroundImageSource="info.jpg">
     <ContentPage.Content>
         <StackLayout Padding="15">
             <Label Text="Sobre nosotros"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" Padding="5" TextColor="Gray" FontSize="25"/>
-            <Label Text="Programadores:" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="Medium"/>
-            <Label Text="Jesus Saenz Jimenez -> Diseño de la applicacion y estilos"/>
-            <Image Source=""/>
-            <Label Text="Ivan, poned los apellidos vosotros jaja"/>
-            <Label Text="Ivan, poned los apellidos vosotros jaja"/>
+            <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="FillAndExpand" />
+            <Label Text="Programadores:" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" FontSize="Medium" Margin="10"/>
+
+            <Label Text="Ivan Sanchez Victoria. Mapa, otras Api's, Google maps."/>
+            <ImageButton Source="lin.jpg"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                    WidthRequest="25"
+                         x:Name="btnivan"
+                         Clicked="btnivan_Clicked"/>
+            <Label Text="Jesus Saenz Jimenez. Diseño de la applicacion y estilos"/>
+            <ImageButton Source="lin.jpg"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                         Clicked="ImageButton_Clicked" WidthRequest="25"/>
+            <Label Text="Sara Bachiller Parra. Idea del proyecto, Api base de datos, geolocalizacion"/>
+            <ImageButton Source="lin.jpg"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                    WidthRequest="25"
+                    Clicked="btnsara_Clicked"
+                         x:Name="btnsara"/>
+            <BoxView Color="Gray"
+             HeightRequest="1"
+             HorizontalOptions="FillAndExpand" Margin="0,20,0,0"/>
+            <Label Text="Rescursos: "
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" Padding="5" TextColor="Gray" FontSize="20"/>
+            <Label Text="Api's utilizadas:" FontSize="17"/>
+            <Label Text="-Api google maps: https://maps.googleapis.com/maps/api/place/"/>
+            <Label Text="-Api Paises, estados y ciudades: https://www.universal-tutorial.com/api/getaccesstoken"/>
+            <Label Text="-Api core sql"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

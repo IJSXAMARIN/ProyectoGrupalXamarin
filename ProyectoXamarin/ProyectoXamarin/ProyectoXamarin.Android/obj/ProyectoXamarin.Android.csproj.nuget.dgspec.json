@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj": {}
+    "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj": {}
   },
   "projects": {
-    "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj": {
+    "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
+        "projectUniqueName": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
         "projectName": "ProyectoXamarin.Android",
-        "projectPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
-        "packagesPath": "C:\\Users\\isanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\obj\\",
+        "projectPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\ProyectoXamarin.Android.csproj",
+        "packagesPath": "C:\\Users\\xusin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\isanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xusin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
-                "projectPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
+              "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
+                "projectPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj"
               }
             }
           }
@@ -66,20 +66,21 @@
         }
       }
     },
-    "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
+    "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
+        "projectUniqueName": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
         "projectName": "ProyectoXamarin",
-        "projectPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
-        "packagesPath": "C:\\Users\\isanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Xamarin\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\obj\\",
+        "projectPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin.csproj",
+        "packagesPath": "C:\\Users\\xusin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\xusin\\git\\ProyectoGrupalXamarin\\ProyectoXamarin\\ProyectoXamarin\\ProyectoXamarin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\isanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xusin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -149,7 +150,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

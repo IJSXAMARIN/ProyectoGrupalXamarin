@@ -1152,3 +1152,5 @@ C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\android\assets\Plugin.Permissions.Abstractions.pdb
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
 C:\Xamarin\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll.mdb
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\info.jpg
+C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin.Android\obj\Debug\90\res\drawable\lin.jpg
