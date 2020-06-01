@@ -28,7 +28,6 @@ C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\Proyect
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Info.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Inicio.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\LogInView.xaml.g.cs
-C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Mapa.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Perfil.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\PlaceDetailsModal.xaml.g.cs
 C:\Users\xusin\git\ProyectoGrupalXamarin\ProyectoXamarin\ProyectoXamarin\ProyectoXamarin\obj\Debug\netstandard2.0\Views\Provincias.xaml.g.cs
