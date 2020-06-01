@@ -7,10 +7,11 @@ namespace ProyectoXamarin.Services
 {
     public class SessionServices
     {
-        public List<Monument> Monumentos { get; set; }
-        public SessionServices()
-        {
-            this.Monumentos = new List<Monument>();
-        }
+        //    public List<Monument> Monumentos { get; set; }
+        //    public SessionServices()
+        //    {
+        //        this.Monumentos = new List<Monument>();
+        //    }
+        //}
     }
 }

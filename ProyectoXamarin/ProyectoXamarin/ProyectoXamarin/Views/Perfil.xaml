@@ -18,6 +18,26 @@
                 <Label Text="Nickname:"/>
                 <Label Text="{Binding UsuarioC.NickName}"/>
             </StackLayout>
+            <CarouselView ItemsSource="{Binding ListaMonu}" Grid.Row="1">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame HorizontalOptions="Center"
+                                   VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Image Source="{Binding Image}"
+                                           HorizontalOptions="FillAndExpand"
+                                           />
+                                    <Label Text="{Binding NombreMonu}"
+                                           TextColor="Orange"
+                                           FontSize="30"
+                                           />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

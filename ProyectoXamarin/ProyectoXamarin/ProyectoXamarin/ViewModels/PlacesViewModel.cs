@@ -11,6 +11,7 @@ using Xamarin.Forms.Maps;
 using System.Net.NetworkInformation;
 using Xamarin.Forms;
 using System.IO;
+using ProyectoXamarin.Repositories;
 
 namespace ProyectoXamarin.ViewModels
 {
@@ -41,11 +42,23 @@ namespace ProyectoXamarin.ViewModels
         {
             // TODO: Pasarle la posición a la api
             List<Place> places = await this.api.GetPlaces(currentPosition);
+
+            RepositoryMonument repo = new RepositoryMonument();
+
+          /*  Parallel.ForEach(places, place =>
+            {
+                place.Visitado = repo.MonumentoVisitado(0, place.PlaceId).Result;
+
+            });*/
+
+
+
             this.Places = new ObservableCollection<Place>(places);
         }
 
         public async Task GetPlacesByCity(String city)
         {
+
             // TODO: Pasarle la posición a la api
             List<Place> places = await this.api.GetPlacesByCity(city);
             this.Places = new ObservableCollection<Place>(places);

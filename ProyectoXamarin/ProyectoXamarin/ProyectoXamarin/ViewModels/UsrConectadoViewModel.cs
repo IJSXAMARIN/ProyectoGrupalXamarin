@@ -21,5 +21,18 @@ namespace ProyectoXamarin.ViewModels
                 OnPropertyChanged("UsuarioC");
             }
         }
+        private List<Monumento> _ListaMonu;
+        public List<Monumento> ListaMonu
+        {
+            get
+            {
+                return this._ListaMonu;
+            }
+            set
+            {
+                this._ListaMonu = value;
+                OnPropertyChanged("ListaMonu");
+            }
+        }
     }
 }

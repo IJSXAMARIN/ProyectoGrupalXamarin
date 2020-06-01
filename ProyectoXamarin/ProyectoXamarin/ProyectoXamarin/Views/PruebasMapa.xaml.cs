@@ -131,6 +131,7 @@ namespace ProyectoXamarin.Views
             Place _place = this.viewModel.GetPlace(placeId);
             // Comprobar si ya se ha "descubierto". Si lo tenemos guardado en la database
             _place = await this.viewModel.LoadImagePlace(_place);
+
             PlaceDetailsModal details = new PlaceDetailsModal();
             PlaceDetailViewModel _viewModel = new PlaceDetailViewModel();
 

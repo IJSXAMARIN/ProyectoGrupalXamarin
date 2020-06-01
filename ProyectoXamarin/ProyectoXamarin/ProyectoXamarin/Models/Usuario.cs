@@ -13,5 +13,7 @@ namespace ProyectoXamarin.Models
         public string Password { get; set; }
 
         public String Salt { get; set; }
+
+        public List<Monumento> Monumentos { get; set; }
     }
 }

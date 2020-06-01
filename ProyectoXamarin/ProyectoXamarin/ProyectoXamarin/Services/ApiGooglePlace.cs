@@ -46,7 +46,7 @@ namespace ProyectoXamarin.Services
 
 
             String request = "/json?location=" + geo.Latitud.ToString().Replace(',', '.') + "," + geo.Longitud.ToString().Replace(',', '.')
-                + "&radius=5000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
+                + "&radius=2000&type=museum&language=es&key=AIzaSyALJ3CYARJGQksqawJZuGwSF6p6rkoSIeM";
             do
             {
                 JsonResultGoogleApi _json = new JsonResultGoogleApi();

@@ -56,7 +56,7 @@ namespace ProyectoXamarin.Droid.Renderers
             marker.SetPosition(new LatLng(pin.Position.Latitude, pin.Position.Longitude));
             marker.SetTitle(pin.Label);
             marker.SetSnippet(pin.Address);
-            if (pin.Type == PinType.Place)
+            if (pin.Type == PinType.SavedPin)
             {
                 marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.star));
             }
@@ -67,13 +67,8 @@ namespace ProyectoXamarin.Droid.Renderers
 
         void OnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
         {
-            var customPin = GetCustomPin(e.Marker);
-            if (customPin == null)
-            {
-                throw new Exception("Custom pin not found");
-            }
-
-            // Do custom stuff here
+           
+           
         }
 
         private Pin GetCustomPin(Marker marker)

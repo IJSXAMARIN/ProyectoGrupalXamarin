@@ -1,5 +1,6 @@
 ﻿using ProyectoXamarin.Base;
 using ProyectoXamarin.Models;
+using ProyectoXamarin.Repositories;
 using ProyectoXamarin.Services;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,30 @@ namespace ProyectoXamarin.ViewModels
             Task.Run(async() => {
             JsonResultGoogleApi json = await this.api.GetDistanceAsync(userPosition, placePosition);
                 this.DistanceDuration = json.DistanceRows.FirstOrDefault().DistanceDurations.FirstOrDefault();
+
+                RepositoryMonument repo = new RepositoryMonument();
+
+                if (this.DistanceDuration.Distance.Value < 1000)
+                {
+
+                    UsrConectadoViewModel viewmodel = new UsrConectadoViewModel();
+
+                    Place p = this.PlaceDetail;
+
+                    Monumento monumento = new Monumento()
+                    {
+                        IdMonument = this.PlaceDetail.PlaceId,
+                        IdUser = 5,
+                        Image = this.PlaceDetail.Photos.FirstOrDefault().PhotoReference,
+                        Latitud = this.PlaceDetail.Geolocation.Location.Latitude,
+                        Longitud = this.PlaceDetail.Geolocation.Location.Longitude,
+                        NombreMonu = this.PlaceDetail.PlaceName,
+                    };
+
+                    await repo.VisitarMonu(monumento);
+
+                }
+
             }).Wait();
         }
 
@@ -70,8 +95,7 @@ namespace ProyectoXamarin.ViewModels
             {
                 return new Command(() =>
                 {
-                // TODO: Cambiar origin por posicion de geolocalizacion
-                    Position origin = new Position(40.416883, -3.703567);
+                    Position origin = new Position(GeolocViewModel.Geo.Latitud,GeolocViewModel.Geo.Longitud);
                     Position placePosition = new Position(this.PlaceDetail.Geolocation.Location.Latitude, this.PlaceDetail.Geolocation.Location.Longitude);
                      this.GetDistanceAsync(origin, placePosition);
                 });

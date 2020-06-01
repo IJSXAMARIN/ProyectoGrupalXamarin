@@ -8,7 +8,8 @@ namespace ProyectoXamarin.Models
 
     public class MonumentosList
     {
-        [JsonProperty("monuments")]
-        public List<Monument> Monumentos { get; set; }
+    //{
+    //    [JsonProperty("monuments")]
+    //    public List<Monument> Monumentos { get; set; }
     }
 }

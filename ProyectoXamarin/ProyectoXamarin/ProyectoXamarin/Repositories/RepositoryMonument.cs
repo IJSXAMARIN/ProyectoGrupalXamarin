@@ -212,39 +212,7 @@ namespace ProyectoXamarin.Repositories
             }
         }
 
-        public async Task<List<Monument>> GetMonumentosAsync(String siglas)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Accept.Clear();
-                String request = "https://tools.wmflabs.org/heritage/api/api.php?action=search&format=json&srcountry="
-                    + siglas.ToLower();
-                client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/4.0");
-                HttpResponseMessage response =
-                    await client.GetAsync(request);
-                if (response.IsSuccessStatusCode)
-                {
-                    String data = await response.Content.ReadAsStringAsync();
-                    if (data != "[]")
-                    {
-                        MonumentosList lista =
-                           JsonConvert.DeserializeObject<MonumentosList>(data);
-                        List<Monument> monuments = lista.Monumentos;
-
-                        return monuments;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
+  
 
         public async Task<List<Country>> GetCountriesRegion(String region)
         {
@@ -302,6 +270,59 @@ namespace ProyectoXamarin.Repositories
             };
             String request = "/api/Usuario/";
             await this.CallApiPost<Usuario>(request, user);// token,
+        }
+        public async Task<List<Monumento>> GetMonumentos(int idUser)
+        {
+            String request = "/api/Usuario/GetMonumentos/" + idUser;
+            List<Monumento> monumentos =
+                await this.CallApiNoTOKEN<List<Monumento>>(request);
+            return monumentos;
+        }
+        public async Task<Boolean> MonumentoVisitado(int idUser, String idMonu)
+        {
+            //MonumentoVisitado/{idUser}/{idMonu}
+            String request = "/MonumentoVisitado/" + idUser + "/" + idMonu;
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(this.url);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(header);
+
+                HttpResponseMessage response =
+                    await client.GetAsync(request);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //var data = await response.Content.ReadAsStringAsync();
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public async Task VisitarMonu(Monumento monu)
+        {
+            //VisitarMonu
+            String request = "/VisitarMonu";
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(this.url);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(header);
+
+                String json = JsonConvert.SerializeObject(monu);
+
+                StringContent content =
+                    new StringContent(json, Encoding.UTF8,
+                    "application/json");
+
+                HttpResponseMessage response =
+                    await client.PostAsync(request, content);
+            }
         }
     }
 }
