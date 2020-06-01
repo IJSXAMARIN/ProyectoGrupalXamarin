@@ -29,7 +29,10 @@ namespace ProyectoXamarin.ViewModels
             set
             {
                 this._UsuarioC = value;
-                IdUsuario = this._UsuarioC.IdUser;
+                if (this.UsuarioC != null && this.UsuarioC.IdUser > 0)
+                {
+                    IdUsuario = this._UsuarioC.IdUser;
+                }
                 this.CargarImgMonu();
                 OnPropertyChanged("UsuarioC");
 

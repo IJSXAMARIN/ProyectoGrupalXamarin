@@ -16,12 +16,10 @@
                                   FontFamily="Arial"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" FontSize="30" />
-                    <Image Source="Portada.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+                        <Image Source="Portada.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
                     </StackLayout>
                 </Frame>
-
-
-            <Frame BorderColor="Gray"
+                <Frame BorderColor="Gray"
        CornerRadius="5"
        Padding="10" Margin="10">
                 <StackLayout>

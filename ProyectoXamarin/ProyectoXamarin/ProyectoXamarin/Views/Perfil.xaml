@@ -10,7 +10,9 @@
     <ContentPage.Content>
         <StackLayout >
             <Image Aspect="AspectFill" Source="persona.jpg"/>
-            <StackLayout Padding="20">
+            <ScrollView Orientation="Vertical">
+                <StackLayout>
+                    <StackLayout Padding="20">
                 <Label Text="Id Usuario:"/>
                 <Label Text="{Binding UsuarioC.IdUser}"/>
                 <Label Text="Nombre de Usuario: "/>
@@ -18,26 +20,28 @@
                 <Label Text="Nickname:"/>
                 <Label Text="{Binding UsuarioC.NickName}"/>
             </StackLayout>
-            <CarouselView ItemsSource="{Binding ListaMonu}" Grid.Row="1">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Frame HorizontalOptions="Center"
-                                   VerticalOptions="CenterAndExpand">
-                                <StackLayout>
-                                    <Image Source="{Binding ImageSource}"
-                                           HorizontalOptions="FillAndExpand"
+            <CarouselView ItemsSource="{Binding ListaMonu}">
+                        <CarouselView.ItemTemplate >
+                            <DataTemplate>
+                                <StackLayout HeightRequest="50">
+                                    <Frame HorizontalOptions="StartAndExpand"
+                                   VerticalOptions="StartAndExpand">
+                                        <StackLayout>
+                                            <Image Source="{Binding ImageSource}"
+                                           HorizontalOptions="CenterAndExpand"
                                            />
-                                    <Label Text="{Binding Nombre}"
+                                            <Label Text="{Binding Nombre}"
                                            TextColor="Orange"
                                            FontSize="30"
                                            />
+                                        </StackLayout>
+                                    </Frame>
                                 </StackLayout>
-                            </Frame>
-                        </StackLayout>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </StackLayout>
+           </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
