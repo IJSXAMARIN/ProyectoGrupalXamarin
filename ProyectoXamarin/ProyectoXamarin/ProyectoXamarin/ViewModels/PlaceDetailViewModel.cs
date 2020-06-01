@@ -70,12 +70,12 @@ namespace ProyectoXamarin.ViewModels
 
                     UsrConectadoViewModel viewmodel = new UsrConectadoViewModel();
 
-                    Place p = this.PlaceDetail;
+                   
 
                     Monumento monumento = new Monumento()
                     {
                         IdMonument = this.PlaceDetail.PlaceId,
-                        IdUser = 5,
+                        IdUser = UsrConectadoViewModel.IdUsuario,
                         Image = this.PlaceDetail.Photos.FirstOrDefault().PhotoReference,
                         Latitud = this.PlaceDetail.Geolocation.Location.Latitude,
                         Longitud = this.PlaceDetail.Geolocation.Location.Longitude,

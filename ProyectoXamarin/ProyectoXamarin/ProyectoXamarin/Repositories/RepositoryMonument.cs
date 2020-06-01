@@ -281,7 +281,7 @@ namespace ProyectoXamarin.Repositories
         public async Task<Boolean> MonumentoVisitado(int idUser, String idMonu)
         {
             //MonumentoVisitado/{idUser}/{idMonu}
-            String request = "/MonumentoVisitado/" + idUser + "/" + idMonu;
+            String request = "/api/Usuario/MonumentoVisitado/" + idUser + "/" + idMonu;
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(this.url);
@@ -293,7 +293,7 @@ namespace ProyectoXamarin.Repositories
 
                 if (response.IsSuccessStatusCode)
                 {
-                    //var data = await response.Content.ReadAsStringAsync();
+                    String data = await response.Content.ReadAsStringAsync();
 
                     return true;
                 }
@@ -307,7 +307,7 @@ namespace ProyectoXamarin.Repositories
         public async Task VisitarMonu(Monumento monu)
         {
             //VisitarMonu
-            String request = "/VisitarMonu";
+            String request = "/api/Usuario/VisitarMonu";
             using (HttpClient client = new HttpClient())
             {
                 client.BaseAddress = new Uri(this.url);
