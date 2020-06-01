@@ -86,7 +86,7 @@ namespace ProyectoXamarin.ViewModels
             {
                 Stream stream = await this.api.LoadImagesPlace(photo.PhotoReference);
 
-                photo.Image = photo.Image = ImageSource.FromStream(() => stream);
+                photo.Image = ImageSource.FromStream(() => stream);
             };
 
             return place;

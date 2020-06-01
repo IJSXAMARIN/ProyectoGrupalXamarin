@@ -94,7 +94,7 @@ namespace ProyectoXamarin.Views
                 {
 
                     Center = position,
-                    Radius = new Xamarin.Forms.Maps.Distance(1000),
+                    Radius = new Xamarin.Forms.Maps.Distance(500),
                     StrokeColor = Color.FromHex("#88FF0000"),
                     StrokeWidth = 8,
                     FillColor = Color.FromHex("#88FFC0CB")

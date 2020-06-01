@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using Xamarin.Forms;
 
 namespace ProyectoXamarin.Models
 {
@@ -12,5 +14,7 @@ namespace ProyectoXamarin.Models
         public double Latitud { get; set; }
         public double Longitud { get; set; }
         public string Image { get; set; }
+
+        public ImageSource ImageSource { get; set; }
     }
 }

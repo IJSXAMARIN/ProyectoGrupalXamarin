@@ -285,7 +285,7 @@ namespace ProyectoXamarin.Repositories
             using (HttpClient client = new HttpClient())
             {
               //  client.BaseAddress = new Uri(this.url);
-              //  client.DefaultRequestHeaders.Clear();
+               client.DefaultRequestHeaders.Clear();
              //   client.DefaultRequestHeaders.Accept.Add(header);
 
                 HttpResponseMessage response = await client.GetAsync("https://apimonumentplay.azurewebsites.net" +request);
