@@ -28,7 +28,7 @@
                                     <Image Source="{Binding Image}"
                                            HorizontalOptions="FillAndExpand"
                                            />
-                                    <Label Text="{Binding NombreMonu}"
+                                    <Label Text="{Binding Nombre}"
                                            TextColor="Orange"
                                            FontSize="30"
                                            />

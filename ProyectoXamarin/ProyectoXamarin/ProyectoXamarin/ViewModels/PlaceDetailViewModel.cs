@@ -70,7 +70,7 @@ namespace ProyectoXamarin.ViewModels
 
                     UsrConectadoViewModel viewmodel = new UsrConectadoViewModel();
 
-                   
+                    Place p = this.PlaceDetail;
 
                     Monumento monumento = new Monumento()
                     {
@@ -79,7 +79,7 @@ namespace ProyectoXamarin.ViewModels
                         Image = this.PlaceDetail.Photos.FirstOrDefault().PhotoReference,
                         Latitud = this.PlaceDetail.Geolocation.Location.Latitude,
                         Longitud = this.PlaceDetail.Geolocation.Location.Longitude,
-                        NombreMonu = this.PlaceDetail.PlaceName,
+                        Nombre = this.PlaceDetail.PlaceName,
                     };
 
                     await repo.VisitarMonu(monumento);

@@ -284,18 +284,26 @@ namespace ProyectoXamarin.Repositories
             String request = "/api/Usuario/MonumentoVisitado/" + idUser + "/" + idMonu;
             using (HttpClient client = new HttpClient())
             {
-                client.BaseAddress = new Uri(this.url);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(header);
+              //  client.BaseAddress = new Uri(this.url);
+              //  client.DefaultRequestHeaders.Clear();
+             //   client.DefaultRequestHeaders.Accept.Add(header);
 
-                HttpResponseMessage response =
-                    await client.GetAsync(request);
+                HttpResponseMessage response = await client.GetAsync("https://apimonumentplay.azurewebsites.net" +request);
 
                 if (response.IsSuccessStatusCode)
                 {
                     String data = await response.Content.ReadAsStringAsync();
 
-                    return true;
+                    if (data == "true")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+                    }
+
                 }
                 else
                 {

@@ -138,7 +138,7 @@ namespace ProyectoXamarin.Views
             _viewModel.PlaceDetail = new PlaceDetails()
             {
                 // TODO: LLamar bbdd y ver si ya está guardado
-                Descubierto = false,
+                Descubierto = _place.Visitado,
                 Geolocation = _place.Geolocation,
                 Photos = _place.Photos,
                 Id = _place.Id,
@@ -146,6 +146,7 @@ namespace ProyectoXamarin.Views
                 PlaceName = _place.PlaceName,
                 Vicinity = _place.Vicinity,
             };
+
             details.BindingContext = _viewModel;
             await Navigation.PushModalAsync(details, true);
         }

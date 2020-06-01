@@ -8,7 +8,7 @@ namespace ProyectoXamarin.Models
     {
         public String IdMonument { get; set; }
         public int IdUser { get; set; }
-        public String NombreMonu { get; set; }
+        public String Nombre { get; set; }
         public double Latitud { get; set; }
         public double Longitud { get; set; }
         public string Image { get; set; }
